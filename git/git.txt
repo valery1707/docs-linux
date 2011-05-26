@@ -1,0 +1,54 @@
+#Client
+sudo apt-get install git-core git-doc git-svn
+
+sudo mkdir /pub
+sudo mkdir /pub/git
+sudo mkdir /pub/git/public
+sudo mkdir /pub/git/public/jpoint
+sudo mkdir /pub/git/public/jpoint/master
+
+#Server gitorious
+# http://gitorious.org/gitorious/pages/UbuntuInstallation
+
+
+# http://habrahabr.ru/blogs/linux/86753/
+
+
+#Proxy Win
+Запуск git через прокси: нужно определить переменную окружения "http_proxy" со значением "http://proxy-host:port"
+Для работы TortoisePlink через прокси нужно импортировать кусок реестра Putty с указанием прокси: "putty.reg"
+
+
+#Proxy-*nix
+# http://blogs.gnome.org/juanje/2009/07/17/git_behind_proxy/
+$ sudo apt-get install netcat-openbsd
+$ mkdir ~/bin
+
+$ cat <<EOF>> ~/bin/proxy-wrapper
+#!/bin/sh
+# Put your own values
+PROXY_IP=10.0.0.80
+PROXY_PORT=22000
+
+nc -x${PROXY_IP}:${PROXY_PORT} -X5 $*
+
+EOF
+$ chmod +x ~/bin/proxy-wrapper
+#Then you’ll have to be sure you have setted the ~/bin directory on your PATH and then add the env variable GIT_PROXY_COMMAND. 
+#That variable will be used by git for doing pushes through git or ssh protocol:
+$ cat <<EOF>> ~/.bash_env
+export PATH=~/bin:"${PATH}"
+export GIT_PROXY_COMMAND=~/bin/proxy-wrapper
+EOF
+
+$ cat <<EOF>> ~/.bashrc
+if [ -f ~/.bash_env ]; then
+    . ~/.bash_env
+fi
+EOF
+
+$ cat <<EOF>> ~/.bash_env
+export PATH=~/bin:"${PATH}"
+export GIT_PROXY_COMMAND=~/bin/proxy-wrapper
+EOF
+

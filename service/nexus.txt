@@ -1,0 +1,17 @@
+# Install on Jetty
+cd /usr/share/jetty/webapps
+sudo -u jetty wget --no-proxy ftp://192.168.8.171/\<OpenSource\>/Apache/Maven/nexus/nexus-webapp-1.9.war -O nexus.war
+sudo /etc/init.d/jetty restart
+
+# Install bundle
+sudo cp nexus-oss-webapp-1.9-bundle.zip /usr/local
+cd /usr/local
+sudo unzip nexus-oss-webapp-1.9-bundle.zip
+ln -s nexus-oss-webapp-1.9 nexus
+cd /usr/local/nexus
+sudo chmod -R a+x bin
+# Run
+sudo ./bin/jsw/macosx-universal-64/nexus start
+tail -f logs/wrapper.log
+# Service
+# http://www.sonatype.com/books/nexus-book/reference/ch03s06.html

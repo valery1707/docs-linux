@@ -1,0 +1,5 @@
+sudo apt-get install noip2
+sudo /etc/init.d/noip2 stop
+sudo noip2 -C -L %имя группы ИЛИ имя хоста вне группы% -U %период обновления в минутах% -u %логин% -p %пароль% -I eth0
+sudo noip2 -S
+sudo /etc/init.d/noip2 start

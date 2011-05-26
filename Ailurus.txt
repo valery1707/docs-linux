@@ -1,0 +1,6 @@
+Ailurus –  альтернатива Ubuntu Tweak.
+По своему функционалу Ailurus очень похож на Ubuntu Tweak, правда в отличие от последнего больше ориентирован на различные «скрытые настройки».
+
+sudo add-apt-repository ppa:ailurus
+sudo apt-get update
+sudo apt-get install ailurus

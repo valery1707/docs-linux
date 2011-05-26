@@ -1,0 +1,2 @@
+dpkg --get-selections "*" > ~/dpkg_Installed.txt
+dpkg --set-selections < ~/dpkg_Installed.txt

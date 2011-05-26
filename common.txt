@@ -1,0 +1,5 @@
+# curl, wget, wput
+sudo apt-get install curl wget wput
+
+# tmux
+sudo apt-get install tmux

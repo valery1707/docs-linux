@@ -1,0 +1,25 @@
+########################
+#Transparent Proxy
+########################
+#Enable mods:
+sudo a2enmod proxy
+sudo a2enmod proxy_balancer
+sudo a2enmod proxy_http
+
+#Create config
+sudo -i
+cat <<EOF>> /etc/apache2/sites-available/redmine
+ProxyPass /redmine balancer://redminecluster
+ProxyPassReverse /redmine balancer://redminecluster
+
+<Proxy balancer://redminecluster>
+  BalancerMember http://127.0.0.1:3001/redmine
+  BalancerMember http://127.0.0.1:3002/redmine
+</Proxy>
+EOF
+
+#Enable new site
+sudo a2ensite redmine
+
+#Restart apache:
+sudo service apache2 restart

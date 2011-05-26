@@ -1,0 +1,10 @@
+sudo apt-get install logwatch logcheck
+
+# http://www.cyberciti.biz/tips/linux-audit-files-to-see-who-made-changes-to-a-file.html
+sudo apt-get install auditd
+sudo chmod 0750 /sbin/audispd
+sudo auditctl -w /etc/passwd -p war -k password-file
+#Add a watch on "/etc/shadow" with the arbitrary filterkey "shadow-file" that generates records for "reads, writes, executes, and appends" on "shadow"
+sudo auditctl -w /etc/shadow -k shadow-file -p rwxa
+#The next rule suppresses auditing for mount syscall exits
+sudo auditctl -a exit,never -S mount

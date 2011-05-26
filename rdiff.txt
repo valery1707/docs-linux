@@ -1,0 +1,8 @@
+$ rdiff-backup --restore-as-of now host.net::/remote-dir/file local-dir/file
+
+#The –restore-as-of (or -r for short) switch tells rdiff-backup to restore instead of back up, and the now option indicates the current time. However, one of the cool things about rdiff-backup, is that you can restore older versions of a file/directory. This command restores host.net::/remote-dir/file as it was 10 days ago into a new location /tmp/file:
+
+$ rdiff-backup -r 10D host.net::/remote-dir/file /tmp/file
+
+
+rdiff-backup --restore-as-of "2011-04-16T21:00:02" --force /mnt/sda2/minecraft/backup/one/ /mnt/sda1/minecraft/one/

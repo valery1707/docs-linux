@@ -1,0 +1,9 @@
+sudo apt-get install recordmydesktop gtk-recordmydesktop
+
+sudo apt-get install jackd jack-tools
+
+sudo apt-get install pavumeter
+sudo apt-get install pavucontrol
+sudo apt-get install paprefs padevchooser
+
+sudo apt-get install xvidcap

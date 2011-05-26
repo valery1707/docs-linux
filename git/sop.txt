@@ -1,0 +1,2 @@
+svn2git svn://serv1/sop --username valeriy.vyrva --authors ~/projects/sop/authors_list_full.txt
+svn2git svn://serv1/sop --username valeriy.vyrva --authors ~/projects/sop/authors_list_full.txt --trunk trunk --nobranches --notags

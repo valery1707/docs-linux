@@ -1,0 +1,3 @@
+#sudo add-apt-repository "deb http://archive.canonical.com/ maverick partner"
+sudo apt-get install centrifydc
+sudo adjoin -w domain.name

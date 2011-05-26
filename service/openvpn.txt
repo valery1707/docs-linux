@@ -1,0 +1,4 @@
+sudo -i
+apt-get install openvpn network-manager-openvpn udev
+touch /etc/openvpn/vpn_connect_name.conf
+>

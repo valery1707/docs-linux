@@ -1,0 +1,25 @@
+# https://help.ubuntu.com/community/Apt-Cacher-Server
+sudo apt-get install apt-cacher
+
+#Edit /etc/apt-cacher/apt-cacher.conf
+sudo nano /etc/apt-cacher/apt-cacher.conf
+sudo update-rc.d apt-cacher defaults
+sudo nano /etc/default/apt-cacher
+sudo /etc/init.d/apt-cacher restart
+
+sudo /etc/init.d/apache2 restart
+http://cacherserver/apt-cacher
+
+#Import any existing apt-get cache:
+sudo /usr/share/apt-cacher/apt-cacher-import.pl -s /var/cache/apt/archives
+
+
+#Clients - mirror
+sudo nano /etc/apt/sources.list
+
+#Client - proxy
+#Use mirror: http://mirror.neolabs.kz/ and configure proxy
+sudo nano /etc/apt/apt.conf
+>Acquire::http::proxy "http://cacherserver:3142/";
+
+echo 'Acquire::http::Proxy "http://hostname:3142";' | sudo tee /etc/apt/apt.conf.d/01proxy

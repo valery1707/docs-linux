@@ -1,0 +1,3 @@
+sudo apt-get install jetty libjetty-extra libjetty-extra-java libjetty-java-doc libjavassist-java liblog4j1.2-java libcommons-logging-java
+gksudo gedit /etc/default/jetty &
+sudo /etc/init.d/jetty start

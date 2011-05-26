@@ -1,0 +1,22 @@
+# https://secure.logmein.com/labs/
+# http://www.thecoderanger.com/how-to-install-and-use-hamachi-on-ubuntu-10-10/
+
+#Download need version (check new on page)
+wget https://secure.logmein.com/labs/logmein-hamachi_2.0.1.13-1_i386.deb
+wget https://secure.logmein.com/labs/logmein-hamachi_2.0.1.13-1_amd64.deb
+
+#install a dependency lsb, which is stated as required on the Lab page
+sudo aptitude install lsb
+#install the downloaded package
+sudo dpkg -i logmein-hamachi_
+
+#Now, we start the service
+sudo service logmein-hamachi start
+
+#hamachi –help
+
+sudo hamachi set-nick officepc
+sudo hamachi login
+sudo hamachi do-join 057-682-285
+
+sudo hamachi list

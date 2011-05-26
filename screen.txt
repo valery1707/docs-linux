@@ -1,0 +1,33 @@
+#—оздать сессию:
+screen -S %session name%
+#—писок открытых сессий
+screen -ls
+#ѕодключение к ранее открытой сессии
+screen -x %session name%
+
+Ќаход€сь в сессии screen:
+Ctrl+A, C Ц создание виртуального экрана
+Ctrl+A, 0 Ц переключение в виртуальный экран с номером 0 (экраны нумеруютс€ от 0 до 9)
+Ctrl+A, D Ц выход из сессии screen без закрыти€ виртуальных экранов (программы продолжат выполнение)
+exit Ц закрытие текущего виртуального экрана
+
+
+
+
+#Byobu это тот же screen, но в красочной упаковке
+sudo add-apt-repository ppa:byobu/ppa
+sudo apt-get update
+sudo apt-get install byobu
+
+#Ќаход€сь в сессии byobu:
+F2 - создание нового окна,
+F3, F4 - переключение между окнами.
+F6 - отключение от сесии
+F8 - задать им€ окну
+F12 - заблокировать терминал
+
+
+
+
+# http://www.techrepublic.com/blog/opensource/is-tmux-the-gnu-screen-killer/1901
+#tmux

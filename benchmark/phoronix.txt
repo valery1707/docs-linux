@@ -1,0 +1,24 @@
+# http://www.phoronix-test-suite.com/?k=downloads
+sudo apt-get install phoronix-test-suite
+
+#Test suites
+phoronix-test-suite list-suites
+
+phoronix-test-suite benchmark cpu
+phoronix-test-suite benchmark memory
+phoronix-test-suite benchmark java
+phoronix-test-suite benchmark universe-cli
+
+
+#Single tests
+phoronix-test-suite list-tests
+
+phoronix-test-suite benchmark apache
+phoronix-test-suite benchmark scimark2
+phoronix-test-suite benchmark java-scimark2
+phoronix-test-suite benchmark john-the-ripper
+phoronix-test-suite benchmark openssl
+phoronix-test-suite benchmark pgbench
+phoronix-test-suite benchmark sqlite
+phoronix-test-suite benchmark postmark
+phoronix-test-suite benchmark ramspeed

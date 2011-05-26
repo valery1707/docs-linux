@@ -1,0 +1,9 @@
+# http://eee-pc.ru/news/yupiter-ty-ne-prav-ili-acpi-control-pod-debian-ubuntu
+# Обновилась до версии 0.0.48 и появилась в PPA репозиториях утилита Jupiter. Утилита позволяет управлять производительностью ноутбука, отключать/включать железо, мониторить температуру ЦПУ, изменять разрешение экрана и его ориентацию. Тем самым данная утилита является полным функциональным аналогом AsTray Plus (http://eee-pc.ru/wiki/%D1%81%D0%BE%D1%84%D1%82:astray_plus) под Win.
+
+sudo add-apt-repository ppa:webupd8team/jupiter
+sudo apt-get update
+sudo apt-get install jupiter
+
+#Затем добавить поддержку SHE для Eee-PC
+sudo apt-get install jupiter-support-eee

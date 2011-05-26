@@ -1,0 +1,3 @@
+sudo add-apt-repository ppa:ubuntu-wine/ppa
+sudo apt-get updates
+sudo apt-get install wine1.3

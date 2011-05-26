@@ -1,0 +1,9 @@
+# http://anothersysadmin.wordpress.com/2008/04/06/howto-active-directory-authentication-in-ubuntu-804/
+sudo apt-get update
+sudo apt-get install likewise-open
+sudo domainjoin-cli join fqdn.of.your.domain Administrator
+sudo update-rc.d likewise-open defaults
+sudo /etc/init.d/likewise-open start
+
+# http://www.petenetlive.com/KB/Article/0000384.htm
+# http://techiedomain.wordpress.com/2010/11/29/active-directory-integration-evolves-for-ubuntu-10-10/

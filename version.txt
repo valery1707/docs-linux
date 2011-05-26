@@ -1,0 +1,3 @@
+cat /etc/issue
+cat /etc/*release*
+lsb_release -a

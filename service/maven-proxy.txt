@@ -1,0 +1,67 @@
+# http://maven-proxy.codehaus.org/
+
+# Goto root
+sudo -i
+
+# Install required packets
+apt-get install daemontools daemontools-run
+
+# Create user
+adduser maven
+
+# Download files
+cd /home/maven/
+mkdir maven-proxy
+cd maven-proxy
+curl https://svn.codehaus.org/maven-proxy/tags/maven-proxy-0_2/maven-proxy/core/src/test/resources/org/apache/maven/proxy/config/PropertyLoaderTest1.properties -o maven-proxy-0.2.properties
+curl http://dist.codehaus.org/maven-proxy/distributions/maven-proxy-standalone-0.2.zip -O
+curl http://dist.codehaus.org/maven-proxy/distributions/maven-proxy-webapp-0.2.zip -O
+
+# Unpack
+unzip maven-proxy-standalone-0.2.zip
+chmod +x *.jar
+
+# Fill properties
+cp maven-proxy-0.2.properties maven-proxy-jpoint.properties
+gedit maven-proxy-jpoint.properties &
+mkdir log
+chown maven:maven -R /home/maven/
+
+# Create dirs for run-scripts
+mkdir /etc/service/maven-proxy
+cd /etc/service/maven-proxy
+
+# Create run-scripts
+touch run.sh
+gedit run.sh &
+>#!/bin/sh
+>JAVA_BIN=$JAVA_HOME/bin/java
+>MAVEN_PROXY_USER=maven
+>MAVEN_PROXY_CONF=/home/$MAVEN_PROXY_USER/maven-proxy/maven-proxy.properties
+>MAVEN_PROXY_JAR=/home/$MAVEN_PROXY_USER/maven-proxy/maven-proxy-standalone-SNAPSHOT-uber.jar
+>exec 2>&1
+>exec setuidgid $MAVEN_PROXY_USER $JAVA_BIN -jar $MAVEN_PROXY_JAR $MAVEN_PROXY_CONF
+chmod +x run.sh
+
+# Create log-scripts
+mkdir log
+touch log/run.sh
+gedit log/run.sh &
+>#!/bin/sh
+>MAVEN_PROXY_USER=maven
+>MAVEN_PROXY_LOGDIR=/home/maven/maven-proxy/log/
+>exec setuidgid MAVEN_PROXY_USER multilog t $MAVEN_PROXY_LOGDIR
+chmod +x log/run.sh
+
+# Set ownership and permissions
+chown maven:maven -R /etc/service/maven-proxy
+chmod 755 /etc/service/maven-proxy/run.sh /etc/service/maven-proxy/log/run.sh
+
+# Check the state of the daemon
+cd /etc/service/
+svstat maven-proxy
+
+#Stop- and Start- scripts
+cd /etc/service/
+sudo svc -d maven-proxy
+sudo svc -u maven-proxy

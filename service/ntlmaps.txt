@@ -1,0 +1,12 @@
+#http://ntlmaps.sourceforge.net/
+#NTLM Authorization Proxy Server
+sudo apt-get install ntlmaps
+
+sudo nano /etc/ntlmaps/server.cfg
+
+### NAT - Karagandy ###
+LM_PART:0
+NT_PART:1
+NTLM_FLAGS:05820000
+
+sudo service ntlmaps restart
