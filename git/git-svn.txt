@@ -3,18 +3,18 @@
 svn log | grep -E "r[0-9]+ \| .+ \|" | awk '{print $3}' | sort | uniq
 
 https://github.com/nirvdrum/svn2git
-#1 Сохраняем пароль svn
+#1 РЎРѕС…СЂР°РЅСЏРµРј РїР°СЂРѕР»СЊ svn
 svn log _SVN_URL_ -r 2
-#2 Получаем список пользователей
+#2 РџРѕР»СѓС‡Р°РµРј СЃРїРёСЃРѕРє РїРѕР»СЊР·РѕРІР°С‚РµР»РµР№
 svn_authors.sh _SVN_URL_ | tee authors.txt
-#3 Перетаскиваем в git
+#3 РџРµСЂРµС‚Р°СЃРєРёРІР°РµРј РІ git
 svn2git _SVN_URL_ --trunk trunk --nobranches --notags --username <<user_with_perms>> --authors ~/authors.txt
-#4 Заливаем на удаленный сервер
+#4 Р—Р°Р»РёРІР°РµРј РЅР° СѓРґР°Р»РµРЅРЅС‹Р№ СЃРµСЂРІРµСЂ
 git push --all ssh://gitolite@jpoint-server/museum
 git push --tags ssh://gitolite@jpoint-server/museum
-#5 Добавляем remote-сервер
+#5 Р”РѕР±Р°РІР»СЏРµРј remote-СЃРµСЂРІРµСЂ
 git remote add gitolite ssh://gitolite@jpoint-server/museum
-#6 Вытаскиваем обновления из svn и заталкиваем их в git
+#6 Р’С‹С‚Р°СЃРєРёРІР°РµРј РѕР±РЅРѕРІР»РµРЅРёСЏ РёР· svn Рё Р·Р°С‚Р°Р»РєРёРІР°РµРј РёС… РІ git
 cd repo
 svn2git --rebase
 git push gitolite master

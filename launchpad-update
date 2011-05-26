@@ -1,7 +1,7 @@
 #! /bin/sh
 
 # http://forum.ubuntu.ru/index.php?topic=65950.msg666464#msg666464
-# Следующие подписи не могут быть проверены, так как недоступен открытый ключ: NO_PUBKEY 
+# РЎР»РµРґСѓСЋС‰РёРµ РїРѕРґРїРёСЃРё РЅРµ РјРѕРіСѓС‚ Р±С‹С‚СЊ РїСЂРѕРІРµСЂРµРЅС‹, С‚Р°Рє РєР°Рє РЅРµРґРѕСЃС‚СѓРїРµРЅ РѕС‚РєСЂС‹С‚С‹Р№ РєР»СЋС‡: NO_PUBKEY 
 
 # Simple script to check for all PPAs refernced in your apt sources and
 # to grab any signing keys you are missing from keyserver.ubuntu.com.

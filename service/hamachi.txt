@@ -13,7 +13,7 @@ sudo dpkg -i logmein-hamachi_
 #Now, we start the service
 sudo service logmein-hamachi start
 
-#hamachi –help
+#hamachi -help
 
 sudo hamachi set-nick officepc
 sudo hamachi login
