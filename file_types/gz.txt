@@ -1,0 +1,1 @@
+gunzip "file_name"
