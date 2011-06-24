@@ -1,0 +1,23 @@
+# http://lug.nsk.ru/lugnskru/2010/10/ustanovka-postgresql-9-pgadmin-iii-v-ubuntu-10-04.html
+
+#Установим необходимые нам дополнительные пакеты
+sudo apt-get install python-software-properties
+
+#Добавляем в свои источники пакетов дополнительный
+sudo add-apt-repository ppa:pitti/postgresql
+
+#Обновим список
+sudo apt-get update
+
+#И теперь уже устанавливаем Postgresql 9.0.1 и pgAdmin III 1.12.0 (на момент написания статьи)
+sudo apt-get install postgresql pgadmin3
+
+#После установки остановим сервер и запустим, указав кодировку UTF-8
+sudo -u postgres pg_dropcluster --stop 9.0 main
+sudo -u postgres pg_createcluster --start -e UTF-8 9.0 main
+
+#Задаем пароль пользователю, для этого войдем в оболочку postgresql под именем пользователя postgres
+sudo -u postgres psql postgres
+
+#Создадим новую БД mydb
+sudo -u postgres createdb mydb -e UTF-8
