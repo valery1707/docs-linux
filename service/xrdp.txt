@@ -1,0 +1,2 @@
+#Remote Desktop Protocol (RDP) server
+sudo apt-get install xrdp
