@@ -15,8 +15,8 @@ sudo service logmein-hamachi start
 
 #hamachi -help
 
-sudo hamachi set-nick officepc
 sudo hamachi login
+sudo hamachi set-nick officepc
 sudo hamachi do-join 057-682-285
 
 sudo hamachi list
