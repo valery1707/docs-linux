@@ -1,2 +1,4 @@
+#conf
+sudo nano /etc/dhcp/dhclient.conf
 #renew
 sudo dhclient -r && sudo dhclient
