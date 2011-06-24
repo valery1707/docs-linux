@@ -10,7 +10,7 @@ sudo add-apt-repository ppa:pitti/postgresql
 sudo apt-get update
 
 #И теперь уже устанавливаем Postgresql 9.0.1 и pgAdmin III 1.12.0 (на момент написания статьи)
-sudo apt-get install postgresql pgadmin3
+sudo apt-get install postgresql postgresql-contrib pgadmin3
 
 #После установки остановим сервер и запустим, указав кодировку UTF-8
 sudo -u postgres pg_dropcluster --stop 9.0 main
