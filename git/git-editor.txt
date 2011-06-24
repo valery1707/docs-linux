@@ -1,0 +1,13 @@
+При работе из Git Bash есть проблема с русскими комментариями: так как Git Bash это все таки DOS окно, то строки в UTF-8 там получить проблемматично. 
+Конечно можно в настройках git указать что входящая кодировка комментариев не UTF-8, а например, win1251, но тут возникнут пролемы при вводе комментариев не из Git Bash (например, Tortoise Git, IntellyJ IDEA) так как их строки будет конвертироваться из указанной кодировки в UTF-8, но они и так уже в UTF-8.
+
+Лучшим решением будет использование внешнего редактора для ввода комментария коммита. Для этого необходимо изменить git параметр core.editor. Главное что бы приложение запускалось отдельным процессом и сохранило файл в кодировке UTF-8.
+Вот пример значений этого параметра для разных редакторов (путь до приложение указывается в одинарных кавычках):
+* EmEditor: git config --global core.editor "'g:/Program Files/TotalCmd_6/Add-on/EmEditor/EmEditor.exe' -sp -cp 65001"
+** -sp: Separete process
+** -cp: Code page (UTF-8 -> 65001)
+* Notepad++: git config --global core.editor "'C:/Program Files/Notepad++/notepad++.exe' -multiInst -notabbar -nosession -noPlugin"
+* TextPad: git config --global core.editor "'C:/Program Files/TextPad 5/TextPad.exe' -m"
+** -m: use of multiple editors
+* Vim: git config --global core.editor "c:\Vim\Vim71\vim.exe"
+* SciTE: git config --global core.editor "'g:/Program Files/SciTE/SciTE.exe' -save.session=0 -save.recent=0 -code.page=65001 -check.if.already.open=0 -backup.files=0 -sidebar.show=0 -tabbar.visible=0 -fold=0 -position.width=-1 -position.height=-1 position.maximize=1"
