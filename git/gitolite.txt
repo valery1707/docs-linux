@@ -1,0 +1,15 @@
+#repositories in: /var/lib/gitolite/repositories/
+
+#on Client
+cp ~/.ssh/id_rsa.pub /tmp/YourName.pub
+
+#on Server
+sudo apt-get install gitolite
+sudo -i
+su - gitolite
+gl-setup /tmp/YourName.pub
+
+#move to new server (https://github.com/sitaramc/gitolite/blob/pu/doc/2-admin.mkd#_moving_the_whole_thing_from_one_server_to_another)
+git commit -m "new server" --allow-empty
+git remote set-url origin ssh://gitolite@jpoint/gitolite-admin
+git push -f
