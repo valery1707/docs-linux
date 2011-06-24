@@ -1,0 +1,8 @@
+http://progit.org/book/ru/ch4-2.html
+использовать SSH-сервер, аутентифицирующий по LDAP-серверу или любому другому централизованному источнику, который у вас может быть уже настроен. Любой способ аутентификации по SSH, какой вы только сможете придумать, должен работать, если пользователь может получить доступ к консоли.
+
+Авторизация пользователей git через LDAP
+http://www.espace.com.eg/blog/2010/11/10/migrating-from-subversion-to-git/
+
+Gitolite LDAP
+http://serverfault.com/questions/180070/allow-users-to-ssh-to-specific-user-through-ldap-and-stored-public-keys
