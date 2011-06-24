@@ -29,7 +29,8 @@ for APT in `find /etc/apt/ -name *.list`; do
         then
             echo Grabbing key $KEYID for archive $PPA by ~$USER
             #sudo apt-key adv --recv-keys --keyserver keyserver.ubuntu.com $KEYID
-            wget http://keyserver.ubuntu.com:11371/pks/lookup?op=get&search=0x$KEYID $KEYID.gpg
+            wget http://keyserver.ubuntu.com:11371/pks/lookup?op=get\&search=0x$KEYID -O- | grep -o -i -E -x "[^<]*" | tee $KEYID.gpg
+            echo '-----END PGP PUBLIC KEY BLOCK-----' | tee -a $KEYID.gpg
             sudo gpg --ignore-time-conflict --no-options --no-default-keyring --secret-keyring /etc/apt/secring.gpg --trustdb-name /etc/apt/trustdb.gpg --keyring /etc/apt/trusted.gpg --primary-keyring /etc/apt/trusted.gpg --import $KEYID.gpg
         else
             echo Already have key $KEYID for archive $PPA by ~$USER
