@@ -1,17 +1,54 @@
+sudo apt-get install openjdk-6-jdk
+>admin/admin123
+
 # Install on Jetty
 cd /usr/share/jetty/webapps
 sudo -u jetty wget --no-proxy ftp://192.168.8.171/\<OpenSource\>/Apache/Maven/nexus/nexus-webapp-1.9.war -O nexus.war
 sudo /etc/init.d/jetty restart
 
 # Install bundle
-sudo cp nexus-oss-webapp-1.9-bundle.zip /usr/local
-cd /usr/local
+sudo cp nexus-oss-webapp-1.9-bundle.zip /var/lib
+cd /var/lib
 sudo unzip nexus-oss-webapp-1.9-bundle.zip
 ln -s nexus-oss-webapp-1.9 nexus
-cd /usr/local/nexus
+cd /var/lib/nexus
 sudo chmod -R a+x bin
 # Run
 sudo ./bin/jsw/macosx-universal-64/nexus start
 tail -f logs/wrapper.log
 # Service
 # http://www.sonatype.com/books/nexus-book/reference/ch03s06.html
+ll /var/lib/nexus
+export nexus_arch=linux-x86-32
+export nexus_home=/var/lib/nexus
+cp ${nexus_home}/bin/jsw/${nexus_arch}/nexus /etc/init.d/nexus
+chmod 755 /etc/init.d/nexus
+nano /etc/init.d/nexus
+>NEXUS_HOME="/var/lib/nexus"
+>PLATFORM="linux-x86-32"
+>WRAPPER_CMD="${NEXUS_HOME}/bin/jsw/${PLATFORM}/wrapper"
+>WRAPPER_CONF="${NEXUS_HOME}/bin/jsw/conf/wrapper.conf"
+>PIDDIR="/var/run"
+cd /etc/init.d
+update-rc.d nexus defaults
+service nexus start
+tail -f /var/lib/nexus/logs/wrapper.log
+
+
+# Apache proxy
+sudo -i
+cat <<EOF>> /etc/apache2/sites-available/nexus
+ProxyPass /nexus balancer://nexuscluster
+ProxyPassReverse /nexus balancer://nexuscluster
+ProxyPreserveHost On
+
+<Proxy balancer://nexuscluster>
+  BalancerMember http://localhost:8081/nexus
+</Proxy>
+EOF
+
+#Enable new site
+sudo a2ensite nexus
+
+#Restart apache:
+sudo service apache2 restart
