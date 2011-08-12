@@ -1,0 +1,5 @@
+sudo apt-get install nmap
+
+Example 1. A representative Nmap scan
+nmap -A -T4 scanme.nmap.org
+
