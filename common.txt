@@ -3,3 +3,9 @@ sudo apt-get install curl wget wput
 
 # tmux
 sudo apt-get install tmux
+
+#archiver
+sudo apt-get install p7zip-full
+
+#Browser
+sudo apt-get install lynx
