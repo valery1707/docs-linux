@@ -1,0 +1,2 @@
+git svn clone https://traccar.svn.sourceforge.net/svnroot/traccar --trunk=trunk --tags=tags --repack=100
+git svn rebase
