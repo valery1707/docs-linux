@@ -1,0 +1,27 @@
+# https://github.com/nirvdrum/svn2git
+sudo apt-get install git-core git-svn ruby rubygems
+sudo gem install svn2git --source http://gemcutter.org --http-proxy $http_proxy
+
+svn log ${SVN_URL} | grep -E "r[0-9]+ \| .+ \|" | awk '{print $3}' | sort | uniq
+
+https://github.com/nirvdrum/svn2git
+export SVN_URL=https://buildkrg:8443/svn/NOMAD/
+export PROJECT_NAME=nomad
+export GIT_URL=ssh://gitolite@jpoint
+#1 Сохраняем пароль svn
+svn log ${SVN_URL} -r 2
+#2 Получаем список пользователей
+svn_authors.sh ${SVN_URL} | tee authors.txt
+#3 Перетаскиваем в git
+mkdir source
+cd source
+svn2git ${SVN_URL} --trunk trunk --nobranches --notags --username <<user_with_perms>> --authors ../authors.txt
+#4 Заливаем на удаленный сервер
+git push --all ${GIT_URL}/${PROJECT_NAME}
+git push --tags ${GIT_URL}/${PROJECT_NAME}
+#5 Добавляем remote-сервер
+git remote add gitolite ${GIT_URL}/${PROJECT_NAME}
+#6 Вытаскиваем обновления из svn и заталкиваем их в git
+cd repo
+svn2git --rebase
+git push gitolite master
