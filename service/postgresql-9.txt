@@ -20,6 +20,3 @@ sudo -u postgres pg_createcluster --start -e UTF-8 9.0 main
 sudo -u postgres psql postgres
 ALTER USER postgres WITH PASSWORD '***';
 \q
-
-#Создадим новую БД mydb
-sudo -u postgres createdb mydb -e UTF-8
