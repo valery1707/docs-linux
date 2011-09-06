@@ -1,0 +1,2 @@
+#Коммит под определенным пользователем
+svn commit --no-auth-cache --username 'Valeriy.Vyrva' --password '***' -m 'commit message' 
