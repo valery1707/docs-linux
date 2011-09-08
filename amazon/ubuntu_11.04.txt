@@ -1,0 +1,100 @@
+Будем создавать новый инстанс на основе Ubuntu 11.04 32
+
+Использованная информация:
+http://jakshi.org.ua/dokuwiki/%D1%81%D0%BE%D0%B7%D0%B4%D0%B0%D0%BD%D0%B8%D0%B5_amazon_ec2_ubuntu_instance
+http://jakshi.org.ua/dokuwiki/%D1%83%D0%BF%D1%80%D0%B0%D0%B2%D0%BB%D0%B5%D0%BD%D0%B8%D0%B5_aws_%D0%B8%D0%B7_%D0%BA%D0%BE%D0%BC%D0%B0%D0%BD%D0%B4%D0%BD%D0%BE%D0%B9_%D1%81%D1%82%D1%80%D0%BE%D0%BA%D0%B8#knife
+http://uec-images.ubuntu.com/releases/11.04/release/
+
+AMI: ami-06ad526f
+
+
+1. Создаем новый инстанс:
+https://console.aws.amazon.com/ec2/home?region=us-east-1#s=Instances
+AMI: ami-06ad526f
+Security Group: openVPN
+
+1.1 Настраиваем Security Group
+Разрешаем входящие подключения по:
+* tcp/22 - SSH
+* tcp/443 - HTTPS/VPN
+* udp/1194 - Не помню зачем
+
+2. Подключаемся по ssh к указанному после запуска IP, используя выбранный ключ и имя пользователя ubuntu
+Восстанавливаем окружение:
+sudo apt-get install curl wget wput tmux
+sudo apt-get install git-core
+git config --global user.name "valery1707"
+git config --global user.email "valery1707@gmail.com"
+cd ~
+git init
+git remote add origin https://valery1707@github.com/valery1707/dotfiles-test.git
+git pull origin master
+
+3. Настраиваем клиент NO-IP
+sudo apt-get install noip2
+sudo /etc/init.d/noip2 stop
+sudo noip2 -C -L cloudAmazon1 -U 60 -u valery1707 -p *** -I eth0
+sudo noip2 -S
+sudo /etc/init.d/noip2 start
+
+4. Настраиваем Hamachi
+mkdir ~/distr
+cd ~/distr
+wget https://secure.logmein.com/labs/logmein-hamachi_2.0.1.13-1_i386.deb
+sudo aptitude install lsb
+sudo dpkg -i logmein-hamachi_
+sudo service logmein-hamachi start
+
+sudo hamachi login
+sudo hamachi set-nick cloudAmazon1
+sudo hamachi do-join valery1707-proxy ***
+
+sudo hamachi list
+
+5. Контроль логов
+sudo apt-get install logwatch logcheck
+sudo apt-get install auditd
+sudo chmod 0750 /sbin/audispd
+sudo auditctl -w /etc/passwd -p war -k password-file
+sudo auditctl -w /etc/shadow -k shadow-file -p rwxa
+sudo auditctl -a exit,never -S mount
+
+6. Устанавливаем полезные ненастраиваемые пакеты
+
+7. OpenVPN http://openvpn.net/index.php/open-source/documentation/howto.html
+sudo -s
+apt-get install openvpn
+cp -R /usr/share/doc/openvpn/examples/easy-rsa/2.0/ /etc/openvpn/
+mv /etc/openvpn/2.0/ /etc/openvpn/amazonServer
+cd /etc/openvpn/amazonServer
+nano vars
+source ./vars
+./clean-all
+./build-ca
+./build-key-server server
+./build-key client-valery1707
+./build-dh
+
+cp /usr/share/doc/openvpn/examples/sample-config-files/server.conf.gz /etc/openvpn/amazonServer.conf.gz
+cd /etc/openvpn/
+gunzip amazonServer.conf.gz
+nano amazonServer.conf
+>port 443
+>proto tcp
+>ca amazonServer/keys/ca.crt
+>cert amazonServer/keys/server.crt
+>key amazonServer/keys/server.key
+>dh amazonServer/keys/dh1024.pem
+>server 10.8.1.0 255.255.255.0
+
+To enable packet forwarding, uncomment the following line in /etc/sysctl.conf:
+>net.ipv4.ip_forward=1
+#Now reload this config
+sudo sysctl -p
+#The last step is to enable network address translation:
+sudo iptables -t nat -A POSTROUTING -o eth0 -j MASQUERADE
+This setting is reset on every reboot, so make sure that you add the following line above exit 0 in the file /etc/rc.local:
+>iptables -t nat -A POSTROUTING -s 10.8.1.0/24 -o eth0 -j MASQUERADE
+
+service openvpn restart
+
