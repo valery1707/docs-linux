@@ -1,0 +1,15 @@
+http://www.nomachine.com/download-package.php?Prod_Id=3501
+
+wget http://64.34.161.181/download/3.5.0/Linux/nxclient_3.5.0-7_i386.deb
+wget http://64.34.161.181/download/3.5.0/Linux/nxnode_3.5.0-6_i386.deb
+wget http://64.34.161.181/download/3.5.0/Linux/FE/nxserver_3.5.0-8_i386.deb
+
+sudo dpkg -i nxclient_3.5.0-7_i386.deb
+sudo dpkg -i nxnode_3.5.0-6_i386.deb
+sudo dpkg -i nxserver_3.5.0-8_i386.deb
+
+The NX service can be controlled by the command /usr/NX/bin/nxserver --status|--start|--stop|--restart.
+Additional commands are available to configure the server.
+Try /usr/NX/bin/nxserver --help for more information.
+
+По дефолту все работает через 22-ой порт
