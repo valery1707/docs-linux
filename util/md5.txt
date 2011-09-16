@@ -1,0 +1,8 @@
+#Вычисление
+md5sum file_to_calc.ext
+
+#Проверка по файлу
+md5sum -c file_with_name_and_hashes.md5
+
+#Формирование файла
+md5sum file_with_mask_*.ext*|tee file_with_hashes.md5
