@@ -1,0 +1,2 @@
+Удобная утилита для коннкта к удаленным хостам, поддерживаем множество протоколов:
+sudo apt-get install remmina remmina-plugins-rdp remmina-plugins-vnc remmina-plugins-nx
