@@ -6,3 +6,4 @@ http://www.espace.com.eg/blog/2010/11/10/migrating-from-subversion-to-git/
 
 Gitolite LDAP
 http://serverfault.com/questions/180070/allow-users-to-ssh-to-specific-user-through-ldap-and-stored-public-keys
+http://sitaramc.github.com/gitolite/doc/authentication-vs-authorisation.html
