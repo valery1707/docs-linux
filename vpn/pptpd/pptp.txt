@@ -1,0 +1,30 @@
+sudo aptitude install pptpd
+
+# Uncomment and modify 2 lines at the end of /etc/pptpd.conf:
+nano /etc/pptpd.conf
+> localip 192.168.240.1
+> remoteip 192.168.240.2-9
+
+# Open the file /etc/ppp/pptpd-options and make sure it contains the following settings:
+nano /etc/ppp/pptpd-options
+> ms-dns 8.8.8.8
+> ms-dns 8.8.4.4
+
+# Добавляем пользователей (USERNAME и PASSWORD нужно заменить на настоящие):
+sudo echo "USERNAME pptpd PASSWORD *" >> /etc/ppp/chap-secrets
+
+sudo /etc/init.d/pptpd restart
+
+# We still need to enable packet forwarding and network address translation on the server.
+# To enable packet forwarding, uncomment the following line in /etc/sysctl.conf:
+> net.ipv4.ip_forward=1
+# Now reload this config:
+sudo sysctl -p
+
+# The last step is to enable network address translation:
+sudo iptables -t nat -A POSTROUTING -o eth0 -j MASQUERADE
+# This setting is reset on every reboot, so make sure that you add the following line above exit 0 in the file /etc/rc.local:
+> iptables -t nat -A POSTROUTING -o eth0 -j MASQUERADE
+
+# Для работы нужно разрешить хождеие траффика GRE
+# При использовании L2TP нужно разрешить подлючения на порты 1701 для TCP и UDP
