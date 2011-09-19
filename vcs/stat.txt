@@ -38,7 +38,7 @@
 * svn: 6s для 100 последних коммитов
 * git: 2s для всех коммитов
 
-Обновление проекта
+Обновление проекта (rev __ -> __)
 * svn:
 ** Траффик по сети: MiB
 ** Время: m s
@@ -50,7 +50,6 @@
 * museum:
 ** 269 Mb (svn-server) -> 191 Mb (git-client) ->  86 Mb (git-server)
 ** 1h 40m
-* sop:		211 Mb (svn-server) -> Mb (git-client) -> Mb (git-server); 0h 0m
 * nomad:
 ** 466 Mb (svn-server) -> 704 Mb (git-client) -> 433 Mb (git-server)
 ** 0h 37m
