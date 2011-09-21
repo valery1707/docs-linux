@@ -1,0 +1,9 @@
+http://habrahabr.ru/blogs/linux/128411/
+
+#Список мониторов: 
+xrandr
+
+#Отключение и включение монитора
+xrandr --output LVDS --off
+xrandr --output LVDS --auto
+
