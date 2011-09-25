@@ -1,3 +1,5 @@
+sudo apt-get install ubuntu-restricted-extras
+
 # curl, wget, wput
 sudo apt-get install curl wget wput
 
