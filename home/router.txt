@@ -1,0 +1,59 @@
+I. Перепрошиваем (http://www.dd-wrt.com/wiki/index.php/Asus_RT-N16)
+1. Качаем начальную прошивку: ftp://dd-wrt.com/others/eko/BrainSlayer-V24-preSP2/2010/08-12-10-r14929/broadcom_K26/dd-wrt.v24-14929_NEWD-2_K2.6_mini_RT-N16.trx
+2. Качаем расширенную прошивку: http://www.dd-wrt.com/dd-wrtv2/downloads/others/eko/BrainSlayer-V24-preSP2/2011/05-08-11-r16994/broadcom_K26/dd-wrt.v24-16994_NEWD-2_K2.6_mega.bin
+3. Использую Internet Explorer заливаем начальную прошивку
+4. Выполняем Factory Reset 
+5. Заливаем расширенную прошивку
+6. Выполняем перезагрузку 30-30-30 удерживая красную кнопку
+
+
+II. OptWare
+1. Форматим флешку на (ext3:"Optware", swap:"Swap", ext3:"Data")
+2. Включаем поддержку USB Core, автозагрузки USB и т.п.
+3. Подключаем флешку к роутеру и перезагружаемся
+4. Выполняем инициализацию optware (команды выполняются на роутере через telnet/ssh):
+wget -O /tmp/prep_optware http://wd.mirmana.com/prep_optware
+sh /tmp/prep_optware
+5. Ставим дополнительно
+ipkg-opt install nano
+
+
+III. OpenDNS + No-IP
+Так как роутер может обновлять ip только на одном сервисе DDNS, а нам нужно новый IP отдавать и на NO-IP.com и на OpenDNS, то делаем так:
+1. Заходим на www.dnsomatic.com с логин-паролем от OpenDNS
+2. Привязываем к аккаунту NO-IP и OpenDNS
+3. Заходим на роутер (telnet/ssh)
+4. Устанавливаем ddclient (не смотря на инфу что встренный тоже сможет работать - у меня этого не произошло)
+ipkg-opt install ddclient libio-socket-ssl-perl
+5. Копируем конфигфайл
+cp /opt/etc/ddclient.conf-dist /opt/etc/ddclient.conf
+6. Добавляем в конце
+##
+## DNS-O-Matic account-configuration
+##
+use=web
+web=myip.dnsomatic.com
+server=updates.dnsomatic.com
+protocol=dyndns2
+login=dnsomatic_username
+password=dnsomatic_password
+all.dnsomatic.com
+7. Создаем скрипт сервиса (/opt/etc/init.d/S99ddclient)
+#!/bin/sh
+NAME=${0##*/}
+killall -q ddclient
+/opt/sbin/ddclient &
+8. Включаем и запускам сервис
+service ddclient on
+service ddclient start
+9. Теперь ddclient будет запускаться при старте роутера и каждые 300 секунд (=5 минут) обновлять данные на DNS-O-Matic, а он эти обновления будет сливать сразу и на OpenDNS и на NO-IP.
+
+
+IV. Настройка Lan
+1. Увел всю сеть на 10.17.6.*
+2. Сам роутер будет теперь 10.17.6.1
+
+
+V. Настройка WiFi
+1. Так как у меня есть устройство стандарта 802.11b, то и роутер будет работать в смешанном режиме BGN, и полной производительности N я не получу
+2. Из-за того же ПринтСервера приходиться держать защиту на уровне WEP
