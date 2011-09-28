@@ -16,6 +16,12 @@ wget -O /tmp/prep_optware http://wd.mirmana.com/prep_optware
 sh /tmp/prep_optware
 5. Ставим дополнительно
 ipkg-opt install nano
+6. Останавливаем не нужное
+service twonky stop
+service twonky off
+7. Запускаем нужное (необходимо для работы Network Printing, SWAT (web admin/config for samba) and OpenVPN)
+service xinetd on
+service xinetd start
 
 
 III. OpenDNS + No-IP
