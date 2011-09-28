@@ -9,7 +9,7 @@ I. Перепрошиваем (http://www.dd-wrt.com/wiki/index.php/Asus_RT-N16)
 
 II. OptWare (http://www.dd-wrt.com/wiki/index.php/Optware%2C_the_Right_Way)
 1. Форматим флешку на (ext3:"Optware", swap:"Swap", ext3:"Data") (http://www.dd-wrt.com/wiki/index.php/How_to_-_Format_and_Partition_External_Storage_Device)
-2. Включаем поддержку USB Core, автозагрузки USB и т.п.
+2. Включаем поддержку Core USB Support, USB Storage Support, Automatic Drive Mount to /opt
 3. Подключаем флешку к роутеру и перезагружаемся
 4. Выполняем инициализацию optware (команды выполняются на роутере через telnet/ssh):
 wget -O /tmp/prep_optware http://wd.mirmana.com/prep_optware
