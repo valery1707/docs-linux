@@ -1,0 +1,8 @@
+http://buildkrg/
+http://vtserver2:8085/redmine/
+http://jpoint/
+http://localhost:8080/
+https://wiki.nat.kz/
+https://mail.google.com/mail/
+http://habrahabr.ru/
+http://myshows.ru/valery1707

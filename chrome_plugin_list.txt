@@ -1,0 +1,34 @@
+[Common]
+AdBlock https://chrome.google.com/webstore/detail/gighmmpiobklfepjocnamgkkbiglidom
+AdBlock+ Element Hiding Helper https://chrome.google.com/webstore/detail/chmimgmjdabgiilljdjfbonifbhiglao
+Smooth gestures https://chrome.google.com/webstore/detail/lfkgmnnajiljnolcgolmmgnecgldgeld
+Xmarks Bookmark Sync https://chrome.google.com/webstore/detail/ajpgkpeckebdhofmmjfgcjjiiejpodla
+
+[Graphics]
+Stop autoplay for YouTube https://chrome.google.com/webstore/detail/lgdfnbpkmkkdhgidgcpdkgpdlfjcgnnh
+Awesome Screenshot: захвати и подпиши https://chrome.google.com/extensions/detail/alelhddbbhepgpmgidjdcjakblofbmce
+Webpage Screenshot https://chrome.google.com/webstore/detail/ckibcdccnfeookdmbahgiakhnjcddpki
+
+[Develop]
+Chrome Sniffer https://chrome.google.com/extensions/detail/homgcnaoacgigpkkljjjekpignblkeae
+Habrahabr.ru Tools https://chrome.google.com/webstore/detail/ekkngamdmcljjgmhlihjiiapfcdladgh
+
+[Low usable]
+Countdown https://chrome.google.com/webstore/detail/gjpgobmdmbpekdmokakiajlcdljldhbm
+Google Dictionary https://chrome.google.com/extensions/detail/mgijmajocgfcbeboacabfgobmjgjcoja?hl=ru
+
+[Shopping]
+Myibidder Auction bid sniper for eBay https://chrome.google.com/webstore/detail/fmebanjjkaohcmifehogijfgcoieefnp
+RetailMeNot https://chrome.google.com/webstore/detail/olkgcckojdoebokfkgknjhejfhodcbgm
+
+[Network]
+Proxy Switchy https://chrome.google.com/webstore/detail/caehdcpeofiiigpdhbabniblemipncjj
+Ultimate Chrome Flag https://chrome.google.com/webstore/detail/dbpojpfdiliekbbiplijcphappgcgjfn
+Context Sharing https://chrome.google.com/webstore/detail/bnefpdfgohfhloeafabpkddnhekjhdnh
+
+[Game]
+Transormice Fullscreen https://chrome.google.com/webstore/detail/ckkjecacgfdkijoeokbhlfikohgociek
+LinguaLeo https://chrome.google.com/webstore/detail/nglbhlefjhcjockellmeclkcijildjhi
+
+_iPhone AppStore
+_LastPass
