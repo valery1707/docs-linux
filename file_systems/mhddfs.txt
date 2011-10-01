@@ -1,0 +1,8 @@
+# Multi-HDD FileSystem (http://mhddfs.uvw.ru/)
+sudo apt-get install mhddfs
+
+#mount
+mhddfs /path/to/dir1,/path/to/dir2[,/path/to/dir3] /path/to/mount
+#unmount
+fusermount -u /path/to/mount
+
