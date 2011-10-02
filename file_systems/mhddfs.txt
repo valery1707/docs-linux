@@ -8,3 +8,7 @@ mhddfs /path/to/dir1,/path/to/dir2[,/path/to/dir3] /path/to/mount -o allow_other
 #unmount
 fusermount -u /path/to/mount
 
+#fstab
+mhddfs#/mnt/first_1T,/mnt/second_1T,/mnt/fourth/common /share/share fuse user,allow_other,default_permissions,exec 0 0
+# Может не работать из-за того что fuse стартует позднее чем отрабатывает fstab: http://bugs.debian.org/cgi-bin/bugreport.cgi?bug=592211
+
