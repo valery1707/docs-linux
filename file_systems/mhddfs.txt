@@ -2,7 +2,9 @@
 sudo apt-get install mhddfs
 
 #mount
-mhddfs /path/to/dir1,/path/to/dir2[,/path/to/dir3] /path/to/mount
+mhddfs /path/to/dir1,/path/to/dir2[,/path/to/dir3] /path/to/mount -o allow_other
+# allow_other - эта опция означает, что этот раздел будет виден и другим пользователям, а не только тому, кто его создал. (про эту опцию вычитал в инете, так как в мануалах программы про нее ничего не сказано).
+
 #unmount
 fusermount -u /path/to/mount
 
