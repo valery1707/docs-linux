@@ -1,4 +1,4 @@
-== Новая фича ===
+== Добавление нового функционала ===
 
 === Создаем ветку ===
 CLI:
@@ -9,9 +9,8 @@ IDEA:
   Checkout: develop
   As new branch: feature-name
 
-
 === Коммиты связанные с изменениями ===
-
+Вносим изменения и коммитим.
 
 === Слияние ===
 
@@ -55,3 +54,5 @@ IDEA:
   Remote: origin
   Push: Selected branches
   Branches: develop
+
+.
