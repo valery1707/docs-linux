@@ -1,8 +1,10 @@
 == Новая фича ===
 
 === Создаем ветку ===
-CLI: git checkout -b feature-name
-IDEA: Version Control -> Git -> Checkout branch
+CLI:
+  git checkout -b feature-name
+IDEA:
+  Version Control -> Git -> Checkout branch
   Current branch: develop
   Checkout: develop
   As new branch: feature-name
@@ -14,30 +16,41 @@ IDEA: Version Control -> Git -> Checkout branch
 === Слияние ===
 
 ==== 1. Переход на основную ветку разработки ====
-CLI: git checkout develop
-IDEA: Version Control -> Git -> Checkout branch
+CLI:
+  git checkout develop
+IDEA:
+  Version Control -> Git -> Checkout branch
   Current branch: feature-name
   Checkout: develop
 
 ==== 2. Обновление ====
-CLI: git pull
-IDEA: Version Control -> Update project
+CLI:
+  git pull
+IDEA:
+  Version Control -> Update project
 
 ==== 3. Слияние с веткой ====
-CLI: git merge --no-ff feature-name
-IDEA: Version Control -> Git -> Merge changes
+CLI:
+  git merge --no-ff feature-name
+IDEA:
+  Version Control -> Git -> Merge changes
   Current branch: develop
   Branches to merge: feature-name
   No fast forward: true
-IDEA: Commit
+IDEA:
+  Commit
 
 ==== 4. Удаление ветки ====
-CLI: git branche -d feature-name
-IDEA: ???
+CLI:
+  git branche -d feature-name
+IDEA:
+  ???
 
 ==== 5. Передача изменений ====
-CLI: git push
-IDEA: Version Control -> Git -> Push changes
+CLI:
+  git push
+IDEA:
+  Version Control -> Git -> Push changes
   Current branch: develop
   Remote: origin
   Push: Selected branches
