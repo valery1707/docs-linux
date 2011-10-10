@@ -1,0 +1,26 @@
+# http://askubuntu.com/questions/30334/list-of-application-indicators
+
+# System load indicator
+# https://launchpad.net/indicator-multiload
+sudo add-apt-repository ppa:indicator-multiload/stable-daily
+sudo apt-get update
+sudo apt-get install indicator-multiload
+
+# CPU Freq
+# https://launchpad.net/indicator-cpufreq
+sudo add-apt-repository ppa:artfwo/ppa
+sudo apt-get update
+sudo apt-get install indicator-cpufreq
+
+# Ejecter
+# https://launchpad.net/ejecter
+#sudo add-apt-repository ppa:fredp/ppa
+#sudo apt-get update
+sudo apt-get install ejecter
+
+# Hardware Sensors Indicator
+# https://launchpad.net/indicator-sensors
+sudo add-apt-repository ppa:alexmurray/indicator-sensors
+sudo apt-get update
+sudo apt-get install indicator-sensors
+
