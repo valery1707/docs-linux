@@ -1,12 +1,12 @@
 http://code.google.com/p/byte-unixbench/
 
 #Prepare
-apt-get install libx11-dev libg11-mesa-dev libxext-dev perl perl-modules make
+apt-get install libx11-dev libgl1-mesa-dev libxext-dev perl perl-modules make
 
 #Download
 wget http://byte-unixbench.googlecode.com/files/UnixBench5.1.3.tgz
 tar xzf UnixBench5.1.3.tgz
 
 #Run
-cd UnixBench5.1.3.tgz
+cd UnixBench/
 ./Run
