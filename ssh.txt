@@ -1,0 +1,16 @@
+# Генерация ключа
+ssh-keygen -t rsa -b 4096 -o amazon_rsa -C "Amazon1"
+
+# github-test
+ssh -T git@github.com
+
+# Авто определение ключей по имени сервера
+# http://nerderati.com/2011/03/simplify-your-life-with-an-ssh-config-file/
+# Создаем файл ~/.ssh/config
+# В нем можно указывать параметры, например так:
+Host amazon1
+  HostName valery1707-cloud1.no-ip.info
+  Port 22000
+  User ubuntu
+  IdentityFile /f/BackUp/Soft/KeePass/aws.amazon.com/valery1707.pem
+  LocalForward 9906 127.0.0.1:3306
