@@ -1,5 +1,7 @@
 #Client
 sudo apt-get install git-core git-doc git-svn
+#Git stable releases
+sudo add-apt-repository ppa:git-core/ppa
 
 sudo mkdir /pub
 sudo mkdir /pub/git
