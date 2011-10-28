@@ -15,7 +15,8 @@ svn_authors.sh ${SVN_URL} | tee authors.txt
 #3 Перетаскиваем в git
 mkdir source
 cd source
-svn2git ${SVN_URL} --trunk trunk --nobranches --notags --username <<user_with_perms>> --authors ../authors.txt
+export PATH=$PATH:/var/lib/gems/1.8/bin
+svn2git ${SVN_URL} --trunk trunk --nobranches --notags --authors ../authors.txt --username <<user_with_perms>>
 #4 Заливаем на удаленный сервер
 git push --all ${GIT_URL}/${PROJECT_NAME}
 git push --tags ${GIT_URL}/${PROJECT_NAME}
