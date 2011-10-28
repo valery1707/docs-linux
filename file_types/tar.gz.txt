@@ -1,0 +1,4 @@
+tar -xzf file_name.tar.gz
+  x - Extract
+  z - Compressed
+  f - File
