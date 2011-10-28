@@ -1,0 +1,2 @@
+== Unpack ==
+bzip2 file_name.bz2
