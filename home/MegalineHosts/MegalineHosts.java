@@ -133,7 +133,11 @@ public class MegalineHosts {
     }
 
     public void setOutput(File file) {
+        File dir = file.getAbsoluteFile().getParentFile();
         if (file.exists() && file.isFile() && file.canWrite()) {
+            this.output = file;
+        } else if (dir != null && dir.exists() && dir.isDirectory() && dir.canWrite() 
+                && (!file.exists())) {
             this.output = file;
         } else {
             System.out.println("Incorrect output file: " + file.getAbsolutePath());
