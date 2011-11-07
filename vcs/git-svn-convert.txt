@@ -25,4 +25,4 @@ git remote add gitolite ${GIT_URL}/${PROJECT_NAME}
 #6 Вытаскиваем обновления из svn и заталкиваем их в git
 cd repo
 svn2git --rebase
-git push gitolite master
+git push --all gitolite
