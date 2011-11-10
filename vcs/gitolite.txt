@@ -13,3 +13,62 @@ gl-setup /tmp/YourName.pub
 git commit -m "new server" --allow-empty
 git remote set-url origin ssh://gitolite@jpoint/gitolite-admin
 git push -f
+
+== git-web ==
+http://computercamp.cdwilson.us/git-gitolite-git-daemon-gitweb-setup-on-ubunt
+
+=== Configure gitolite ===
+
+#Append www-data to gitolite group so gitweb can access the repos:
+sudo usermod -a -G gitolite www-data
+sudo service apache2 restart
+
+#change $REPO_UMASK = 0077; to $REPO_UMASK = 0027; # gets you 'rwxr-x---'
+sudo nano /var/lib/gitolite/.gitolite.rc
+sudo chmod g+r /var/lib/gitolite/projects.list
+sudo chmod -R g+rx /var/lib/gitolite/repositories
+
+=== Configure projects ===
+In gitolite config add R-access for user "daemon".
+<pre>
+repo    testing
+      RW+     =   @all
+      R       =   daemon
+</pre>
+Define comment for repository:
+<pre>
+testing "Owner" = "Test repo"
+</pre>
+
+=== Install gitweb ===
+sudo apt-get install highlight gitweb
+# change $projectroot to /var/lib/gitolite/repositories
+# change $projects_list to /var/lib/gitolite/projects.list
+sudo nano /etc/gitweb.conf
+
+#To enable other optional features of gitweb, add the following:
+#$feature{''}{'default'} = [1];
+#$feature{''}{'override'} = 1;
+#Features list: blame, pickaxe, snapshot, search, grep, show-sizes, highlight
+$feature{'blame'}{'default'} = [1];
+$feature{'blame'}{'override'} = 1;
+
+$feature{'pickaxe'}{'default'} = [1];
+$feature{'pickaxe'}{'override'} = 1;
+
+$feature{'snapshot'}{'default'} = ['tgz', 'gzip', 'zip'];
+$feature{'snapshot'}{'override'} = 1;
+
+$feature{'search'}{'default'} = [1];
+
+$feature{'grep'}{'default'} = [1];
+$feature{'grep'}{'override'} = 1;
+
+$feature{'show-sizes'}{'default'} = [1];
+$feature{'show-sizes'}{'override'} = 1;
+
+$feature{'avatar'}{'default'} = ['gravatar'];
+$feature{'avatar'}{'override'} = 1;
+
+$feature{'highlight'}{'default'} = [1];
+$feature{'highlight'}{'override'} = 1;
