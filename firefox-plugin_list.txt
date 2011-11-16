@@ -10,7 +10,7 @@
 * Mozilla Archive Format (1.0.0)
 * PDF Download (3.0.0.2)
 * Redirect Remover https://addons.mozilla.org/ru/firefox/addon/redirect-remover/
-* RetailMeNot (2.4)
+* RetailMeNot https://addons.mozilla.org/en-US/firefox/addon/retailmenot/
 * -Fastest Search https://addons.mozilla.org/ru/firefox/addon/fastest-search/
 * Shorten URL https://addons.mozilla.org/ru/firefox/addon/shorten-url/
 
