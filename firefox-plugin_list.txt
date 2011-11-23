@@ -7,7 +7,7 @@
 * Google Shortcuts https://addons.mozilla.org/ru/firefox/addon/google-shortcuts-all-google-se/
 * Google Dictionary and Goole Translate (2.5)
 * ImTranslator (4.01)
-* Mozilla Archive Format (1.0.0)
+* Mozilla Archive Format http://maf.mozdev.org/
 * PDF Download (3.0.0.2)
 * Redirect Remover https://addons.mozilla.org/ru/firefox/addon/redirect-remover/
 * RetailMeNot https://addons.mozilla.org/en-US/firefox/addon/retailmenot/
