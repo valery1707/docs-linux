@@ -1,0 +1,6 @@
+* Tortoise Merge
+*# <code>git config --global diff.tool tortoise</code>
+*# <code>git config --global diff.guitool tortoise</code>
+*# <code>git config --global difftool.tortoise.cmd '"c:\Program Files\TortoiseGit\bin\TortoiseMerge.exe" -base:"$LOCAL" -mine:"$BASE" -basename:"HEAD" -minename:"WorkingCopy"'</code>
+*# <code>git config --global merge.tool tortoise</code>
+*# <code>git config --global mergetool.tortoise.cmd '"c:\Program Files\TortoiseGit\bin\TortoiseMerge.exe" -base:"$BASE" -theirs:"$REMOTE" -mine:"$LOCAL" -merged:"$MERGED"'</code>
