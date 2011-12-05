@@ -1,6 +1,19 @@
 #Просмотр примонтированных разделов
 mount -l
 
+#Монтирование FAT
+sudo mount -t vfat /dev/sdb1 /media/external -o uid=1000,gid=1000,utf8,dmask=027,fmask=137
+#Монтирование NTFS
+sudo mount -t ntfs-3g /dev/sdb1 /media/external
+#Размонтирование
+sudo umount /media/external
+
+#mount the device /dev/sdb1 at /media/flash_drive
+pmount /dev/sdb1 flash_drive
+#To unmount the device, use pumount, like so
+pumount /dev/sdb1
+pumount flash_drive
+
 #Информация об автоматически монтируемых устройствах храниться тут:
 /etc/fstab
 #Формат:
