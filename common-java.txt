@@ -1,3 +1,11 @@
 sudo apt-get install openjdk-6-jre openjdk-6-jdk icedtea-plugin
 
-sudo apt-get install ant maven2
+sudo apt-get install ant
+
+sudo apt-get install maven2
+
+https://launchpad.net/~natecarlson/+archive/maven3
+sudo add-apt-repository ppa:natecarlson/maven3
+sudo apt-get update
+sudo apt-get install maven3
+# Add "/usr/share/maven3/bin" to $PATH
