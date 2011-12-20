@@ -88,4 +88,17 @@ java -jar jdupdater.jar
 === NoIP ===
 #include: /service/no-ip.txt
 
-=== Downloads ===
+== Разное ==
+
+=== UPS ===
+#include: http://habrahabr.ru/blogs/linux/132099/
+tail -f /var/log/apcupsd.events
+http://habrahabr.ru/blogs/linux/102032/
+
+=== Benchmar ===
+#include: /benchmark/UnixBench.txt
+
+== Projects ==
+
+=== Japan ===
+#include: /vcs/git-svn-convert.txt
