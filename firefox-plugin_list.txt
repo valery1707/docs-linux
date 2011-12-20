@@ -57,6 +57,7 @@
 * Dust-Me Selectors (2.2)
 
 == Web-analyze ==
+* BuiltWith https://addons.mozilla.org/en-us/firefox/addon/builtwith/
 * WorldIp (2.1.5)
 * Wappalyzer (1.13.0)
 * YSlow (2.1.0)
