@@ -1,6 +1,9 @@
+* Список утилит: http://stackoverflow.com/questions/12625/best-diff-tool
+
 * Tortoise Merge
-*# <code>git config --global diff.tool tortoise</code>
-*# <code>git config --global diff.guitool tortoise</code>
-*# <code>git config --global difftool.tortoise.cmd '"c:\Program Files\TortoiseGit\bin\TortoiseMerge.exe" -base:"$LOCAL" -mine:"$BASE" -basename:"HEAD" -minename:"WorkingCopy"'</code>
-*# <code>git config --global merge.tool tortoise</code>
-*# <code>git config --global mergetool.tortoise.cmd '"c:\Program Files\TortoiseGit\bin\TortoiseMerge.exe" -base:"$BASE" -theirs:"$REMOTE" -mine:"$LOCAL" -merged:"$MERGED"'</code>
+git config --global diff.tool tortoise
+git config --global diff.guitool tortoise
+git config --global difftool.tortoise.cmd '"c:\Program Files\TortoiseGit\bin\TortoiseMerge.exe" -base:"$LOCAL" -mine:"$BASE" -basename:"HEAD" -minename:"WorkingCopy"'
+git config --global merge.tool tortoise
+git config --global mergetool.tortoise.cmd '"c:\Program Files\TortoiseGit\bin\TortoiseMerge.exe" -base:"$BASE" -theirs:"$REMOTE" -mine:"$LOCAL" -merged:"$MERGED" -basename:"BASE" -theirsname:"REMOTE" -minename:"LOCAL" -mergedname:"RESULT"'
+
