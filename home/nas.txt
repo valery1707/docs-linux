@@ -27,6 +27,7 @@ sudo apt-get install htop iotop atop
 #include: /file_systems/mhddfs.txt
 ##/etc/rc.local
 ##merged_video		=> /media/hdd_5/Video,/media/hdd_1/Video,/media/hdd_2/Video,/media/hdd_3/Video,/media/hdd_4/Video
+##merged_music		=> /media/hdd_1/Downloads/uTorrent/Music,/media/hdd_3/Downloads/uTorrent/Music
 ##merged_distr		=> /media/hdd_5/Distr,/media/hdd_1/Distr,/media/hdd_3/Distr
 ##merged_download	=> /media/hdd_5/Downloads,/media/hdd_1/Downloads,/media/hdd_2/Downloads,/media/hdd_3/Downloads
 
@@ -39,6 +40,7 @@ sudo apt-get install gnome
 cd /srv/ftp
 ##/etc/rc.local
 mount --bind /media/merged_video /srv/ftp/Video
+mount --bind /media/merged_music /srv/ftp/Music
 mount --bind /media/merged_distr /srv/ftp/Distr
 mount --bind /media/merged_downloads /srv/ftp/Downloads
 
