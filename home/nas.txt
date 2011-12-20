@@ -57,19 +57,35 @@ mount --bind /media/merged_downloads /srv/ftp/Downloads
 === Samba ===
 #include: https://help.ubuntu.com/11.10/serverguide/C/samba-fileserver.html
 
+=== Apache ===
+sudo apt-get install apache2
+
+== Инет ==
+
+=== Hamachi ===
+#include: /service/hamachi.txt
+
 === Torrents ===
 sudo apt-get install deluge deluged deluge-webui
 #include: http://dev.deluge-torrent.org/wiki/UserGuide/InitScript/Ubuntu
 
-=== UPS ===
+=== Downloads ===
+sudo apt-get install arica2
 
-=== Apache ===
-sudo apt-get install apache2
+sudo apt-get install fatrat fatrat-opensubtitles
+
+#https://launchpad.net/~jd-team/+archive/jdownloader
+sudo add-apt-repository ppa:jd-team/jdownloader
+sudo apt-get update
+sudo apt-get install jdownloader
+jdownloader
+cd ~/.jdownloader
+java -jar jdupdater.jar
 
 === Nod32View ===
 #include: https://github.com/valery1707/eset_upd
 
-=== Hamachi ===
-#include: /service/hamachi.txt
+=== NoIP ===
+#include: /service/no-ip.txt
 
 === Downloads ===
