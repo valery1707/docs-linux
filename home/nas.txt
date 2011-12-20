@@ -31,9 +31,19 @@ sudo apt-get install htop iotop atop
 ##merged_distr		=> /media/hdd_5/Distr,/media/hdd_1/Distr,/media/hdd_3/Distr
 ##merged_download	=> /media/hdd_5/Downloads,/media/hdd_1/Downloads,/media/hdd_2/Downloads,/media/hdd_3/Downloads
 
+== Локалка ==
+
 === Удаленный рабочий стол ===
-#include: /service/remote/freeNX.txt
-sudo apt-get install gnome
+--#include: /service/remote/freeNX.txt
+sudo apt-get install gnome-core
+--sudo apt-get install tightvncserver
+--sudo apt-get install ltsp-server-standalone
+
+#include: https://launchpad.net/~x2go/+archive/stable
+sudo apt-add-repository ppa:x2go/stable
+sudo apt-get update
+sudo apt-get install x2goserver
+--sudo apt-get install x2gognomebindings
 
 === FTP ===
 #include: https://help.ubuntu.com/11.10/serverguide/C/ftp-server.html
