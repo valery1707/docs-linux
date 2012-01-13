@@ -5,7 +5,7 @@
 * CheckPlaces (2.5.0)
 * FireShot (0.88)
 * Google Shortcuts https://addons.mozilla.org/ru/firefox/addon/google-shortcuts-all-google-se/
-* Google Dictionary and Goole Translate (2.5)
+* Google Dictionary and Google Translate (2.5)
 * ImTranslator (4.01)
 * Mozilla Archive Format http://maf.mozdev.org/
 * PDF Download (3.0.0.2)
