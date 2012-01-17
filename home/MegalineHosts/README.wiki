@@ -10,7 +10,7 @@
 Открываем блокнот (в Windows 7 нужно будет запустить его с правами администратора) и открыть файл "'%SystemRoot%\system32\drivers\etc\hosts'", в который вставить содержимое файла MegalineHosts.out
 
 == Обновление ==
-За обновлениями можно следить через RSS: http://pipes.yahoo.com/pipes/pipe.run?_id=8cfc9e1bee2030d8eac66892023d323e&_render=rss
+За обновлениями можно следить через RSS: http://pipes.yahoo.com/pipes/pipe.run?_id=bf56ece95aafad37c95162b745d6dba3&_render=rss
 
 == Почему Java? ==
 Пожалуй более подходящим для такой задачи языком будет python, но:
