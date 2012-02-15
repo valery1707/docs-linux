@@ -46,14 +46,14 @@
 72.14.204.132	www.ig.gmodules.com
 
 # Livejournal Common
-209.200.154.225	livejournal.com
-209.200.154.225	www.livejournal.com
-209.200.154.225	p-stat.livejournal.com
-209.200.154.225	cssproxy.livejournal.com
-209.200.154.225	p-userpic.livejournal.com
+208.93.0.128	livejournal.com
+208.93.0.128	www.livejournal.com
+208.93.0.128	p-stat.livejournal.com
+208.93.0.128	cssproxy.livejournal.com
+208.93.0.128	p-userpic.livejournal.com
 208.93.1.14	stat.livejournal.com
-66.114.52.22	pics.livejournal.com
-209.200.154.225	community.livejournal.com
+66.114.52.23	pics.livejournal.com
+208.93.0.128	community.livejournal.com
 
 # Blogspot.com Common
 72.14.204.191	blogspot.com
@@ -76,8 +76,8 @@
 
 # Ytimg.com
 72.14.204.102	s.ytimg.com
-72.14.204.101	i1.ytimg.com
-72.14.204.100	i2.ytimg.com
-72.14.204.138	i3.ytimg.com
-72.14.204.113	i4.ytimg.com
+72.14.204.138	i1.ytimg.com
+72.14.204.113	i2.ytimg.com
+72.14.204.102	i3.ytimg.com
+72.14.204.101	i4.ytimg.com
 
