@@ -18,8 +18,8 @@
 * Flagfox https://addons.mozilla.org/ru/firefox/addon/flagfox/
 * Download statusbar https://addons.mozilla.org/ru/firefox/addon/download-statusbar/
 * FoxyProxy Standard https://addons.mozilla.org/ru/firefox/addon/foxyproxy-standard/contribute/roadblock/
-* CacheViewer https://addons.mozilla.org/ru/firefox/addon/cacheviewer-continued/
-** CacheIt! https://addons.mozilla.org/ru/firefox/addon/cacheit/
+** CacheViewer https://addons.mozilla.org/ru/firefox/addon/cacheviewer-continued/
+* CacheIt! https://addons.mozilla.org/ru/firefox/addon/cacheit/
 ** Gcache+ https://addons.mozilla.org/ru/firefox/addon/gcache-13694/
 
 == Common-download ==
