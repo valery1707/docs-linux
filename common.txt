@@ -16,3 +16,6 @@ sudo apt-get install lynx
 sudo add-apt-repository ppa:danielrichter2007/grub-customizer
 sudo apt-get update
 sudo apt-get install grub-customizer
+
+#Консольная утилита для анализа использования диска
+sudo apt-get install ncdu
