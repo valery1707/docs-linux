@@ -8,6 +8,8 @@ sudo apt-get install tmux
 
 #archiver
 sudo apt-get install p7zip-full
+#Консольная утилита работы с архивами (aunpack, apack, als, acat)
+sudo apt-get install atool
 
 #Browser
 sudo apt-get install lynx
