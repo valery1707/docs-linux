@@ -1,0 +1,9 @@
+sudo apt-get install lxde
+
+sudo update-alternatives --config x-session-manager
+>/usr/bin/lxsession
+sudo update-alternatives --config x-window-manager
+>/usr/bin/openbox
+
+sudo nano /etc/xdg/lxsession/LXDE/autostart
+>@setxkbmap -layout us,ru -variant , -option -option grp:ctrl_toggle,grp:alt_shift_toggle,grp_led:scroll
