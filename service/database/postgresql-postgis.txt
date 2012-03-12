@@ -1,0 +1,1 @@
+http://blog.smartlogicsolutions.com/2010/03/04/installing-postgis-1-5-0-on-postgresql-8-4-on-ubuntu-9-10/
