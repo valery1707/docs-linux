@@ -1,0 +1,18 @@
+smbnetfs
+http://aboutubuntu.ru/content/ustanovka-smbnetfs-udobnyi-dostup-k-smb
+
+sudo apt-get install smbnetfs
+
+mkdir -p ~/.smb
+cp /etc/samba/smb.conf ~/.smb
+cp /etc/smbnetfs.conf ~/.smb
+touch ~/.smb/smbnetfs.auth
+touch ~/.smb/smbnetfs.host
+chmod 600 ~/.smb/smbnetfs.*
+
+echo 'auth "DOMAIN/user" "password"'>>~/.smb/smbnetfs.auth
+
+sudo mkdir /media/samba
+sudo chmod a+w /media/samba
+
+smbnetfs /media/samba
