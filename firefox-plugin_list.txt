@@ -13,6 +13,7 @@
 * RetailMeNot https://addons.mozilla.org/en-US/firefox/addon/retailmenot/
 * -Fastest Search https://addons.mozilla.org/ru/firefox/addon/fastest-search/
 * Shorten URL https://addons.mozilla.org/ru/firefox/addon/shorten-url/
+* AutoCopy https://addons.mozilla.org/ru/firefox/addon/autocopy/
 
 == Network ==
 * Flagfox https://addons.mozilla.org/ru/firefox/addon/flagfox/
@@ -21,6 +22,8 @@
 ** CacheViewer https://addons.mozilla.org/ru/firefox/addon/cacheviewer-continued/
 * CacheIt! https://addons.mozilla.org/ru/firefox/addon/cacheit/
 ** Gcache+ https://addons.mozilla.org/ru/firefox/addon/gcache-13694/
+* Ghostery https://addons.mozilla.org/ru/firefox/addon/ghostery/
+* View Cookies https://addons.mozilla.org/ru/firefox/addon/view-cookies/
 
 == Common-download ==
 * DownThemAll! (2.0.2)
