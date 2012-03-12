@@ -1,0 +1,10 @@
+# Первоначальная синхронизация (выполнять под root)
+date && ntpdate pool.ntp.org && date
+
+# установка
+sudo apt-get install ntp ntp-doc
+sudo service ntp status
+
+# проверка (должны показываться строки с символом '*')
+ntpq -pn
+ntpq -p
