@@ -1,0 +1,55 @@
+# http://minecraft.codeemo.com/buildmineos/index.php/Main_Page
+# https://launchpad.net/~debfx/+archive/virtualbox
+sudo add-apt-repository ppa:debfx/virtualbox
+sudo apt-get update
+sudo apt-get install virtualbox
+
+== Create VM ==
+VBoxManage createvm --name "MineOS" --register
+VBoxManage showvminfo "MineOS"
+
+VBoxManage modifyvm "MineOS" --memory 1024
+VBoxManage list ostypes
+VBoxManage modifyvm "MineOS" --ostype Linux26
+VBoxManage modifyvm "MineOS" --ioapic off
+VBoxManage modifyvm "MineOS" --nic1 bridged --bridgeadapter1 eth0 --macaddress1 08002739e320
+
+== CD ==
+VBoxManage storagectl "MineOS" --name "cd" --add ide --bootable on
+VBoxManage storageattach "MineOS" --storagectl "cd" --port 0 --device 0 --type dvddrive --medium /media/merged_distr/CD-Image/Games/MineOS_CRUX/mineos_crux-0.4.11.iso
+
+== HDD ==
+VBoxManage storagectl "MineOS" --name "hd" --add sata --bootable on
+VBoxManage createhd --filename "/srv/virtualbox/mineos/mineos-boot.vdi" --size 1024 --format VDI --variant Fixed
+VBoxManage storageattach "MineOS" --storagectl "hd" --port 0 --device 0 --type hdd --medium /srv/virtualbox/mineos/mineos-boot.vdi
+VBoxManage modifyvm "MineOS" --boot1 disk
+
+== Timezone ==
+Setting timezone to Dhaka
+* /etc/rc.conf
+* /etc/php/php.ini
+
+== Start ==
+#for test
+DISPLAY=:50 VBoxManage startvm "MineOS"
+
+#for production (in ~/.bash_env_local)
+VBoxManage startvm "MineOS" --type headless
+VBoxHeadless --startvm "MineOS"
+
+== Stop ==
+VBoxManage controlvm "MineOS" poweroff
+
+== Control ==
+cd /usr/games/minecraft
+
+#start
+./mineos_console.py start valery1707
+#stop
+./mineos_console.py stop valery1707
+#map
+./mineos_console.py map valery1707
+
+== ToDo ==
+Автозапуск виртуалки при старте компа
+Автозапуск minecraft-сервера при старте виртуалки
