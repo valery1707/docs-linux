@@ -1,5 +1,20 @@
-[Отмена на запрос пароля]
+== Отмена на запрос пароля ==
 Поставит просто пустой пароль нельзя, но можно разрешить входить без пароля:
 1. При логине: в параметрах пароля пользователя
 2. При скринсейвере: Параметры - Хранитель экрана
 3. После просыпания: Alt+F2 -- gconf-editor -- gnome-power-manager -- lock 
+
+== Автозагрузка ==
+sudo cp /etc/init/tty6.conf /etc/init/ttyS0.conf
+sudo nano /etc/init/ttyS0.conf
+>> exec /sbin/mingetty --autologin <username> --noclear ttyS0
+nano ~/.bash_env_local
+>>if [ -z "$DISPLAY" ] && [ $(tty) == /dev/ttyS0 ]; then
+>>    startx
+>>fi
+
+== x2go (не работает) ==
+x2gostartagent 1024x768 lan 16m-jpeg-9 unix-kde-depth_24 us pc105/us 1 D gnome-session
+x2gostartagent 1024x768 lan 16m-jpeg-9 unix-kde-depth_32 us pc105/us 1 D GNOME
+x2gostartagent 1024x768 lan 16m-jpeg-9 unix-kde-depth_32 us pc105/us 1 R GNOME
+DISPLAY=:50 deluge &
