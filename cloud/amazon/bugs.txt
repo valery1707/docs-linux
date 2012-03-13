@@ -1,8 +1,8 @@
 # Can not update/install openjdk
 https://bugs.launchpad.net/ubuntu/+source/linux-ec2/+bug/634487
 
-1. Stop instance (sudo /sbin/halt)
-2. Change instance type to m1.small (or more) ant start
+1. Stop instance (sudo shutdown -h -P now)
+2. Change instance type to m1.small (or more) and start
 3. Install updates (sudo apt-get -f install)
-4. Stop it again (sudo /sbin/halt)
+4. Stop it again (sudo shutdown -h -P now)
 5. Change instance type back to t1.micro and start
