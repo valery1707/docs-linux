@@ -63,6 +63,9 @@ mount --bind /srv/www/www_hosts/main/NOD32view/ /srv/ftp/NOD32view
 === Apache ===
 sudo apt-get install apache2
 
+=== NTP ===
+#include: service/ntp.txt
+
 == Инет ==
 
 === Hamachi ===
