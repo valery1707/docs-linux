@@ -1,0 +1,36 @@
+# http://openvpn.net/index.php/open-source/documentation/howto.html
+sudo -i
+apt-get install openvpn
+cp -R /usr/share/doc/openvpn/examples/easy-rsa/2.0/ /etc/openvpn/
+mv /etc/openvpn/2.0/ /etc/openvpn/amazonServer
+cd /etc/openvpn/amazonServer
+nano vars
+source ./vars
+./clean-all
+./build-ca
+./build-key-server server
+./build-key client-valery1707
+./build-dh
+
+cp /usr/share/doc/openvpn/examples/sample-config-files/server.conf.gz /etc/openvpn/amazonServer.conf.gz
+cd /etc/openvpn/
+gunzip amazonServer.conf.gz
+nano amazonServer.conf
+>port 443
+>proto tcp
+>ca amazonServer/keys/ca.crt
+>cert amazonServer/keys/server.crt
+>key amazonServer/keys/server.key
+>dh amazonServer/keys/dh1024.pem
+>server 10.8.1.0 255.255.255.0
+
+To enable packet forwarding, uncomment the following line in /etc/sysctl.conf:
+>net.ipv4.ip_forward=1
+#Now reload this config
+sudo sysctl -p
+#The last step is to enable network address translation:
+sudo iptables -t nat -A POSTROUTING -o eth0 -j MASQUERADE
+This setting is reset on every reboot, so make sure that you add the following line above exit 0 in the file /etc/rc.local:
+>iptables -t nat -A POSTROUTING -s 10.8.1.0/24 -o eth0 -j MASQUERADE
+
+service openvpn restart
