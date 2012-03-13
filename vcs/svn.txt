@@ -1,6 +1,3 @@
 sudo add-apt-repository ppa:dominik-stadler/subversion-1.7
 sudo apt-get update
 sudo apt-get install subversion
-
-#Коммит под определенным пользователем
-svn commit --no-auth-cache --username 'Valeriy.Vyrva' --password '***' -m 'commit message' 
