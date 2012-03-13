@@ -1,0 +1,50 @@
+== Уходим из под root ==
+В некоторых случаях нам дают доступ к пользователю root. Лучше работать под другим пользователем и подключаться по ключу.
+Создаем нового пользователя и указываем ему пароль
+  adduser valery1707
+Переключаемся в нового пользователя
+  sudo -i -u valery1707
+Прописываем параметры своего ключа:
+  mkdir .ssh
+  chmod u+rwx,go-rwx .ssh
+  nano .ssh/authorized_keys
+  chmod u+rw,u-x,go-rwx .ssh/authorized_keys
+Разрешаем логин только по ключу
+nano /etc/ssh/sshd_config
+* RSAAuthentication=yes
+* PubkeyAuthentication=yes
+* PasswordAuthentication=no
+Разрешаем вызов sudo без ввода пароля
+visudo
+* username ALL=(ALL) NOPASSWD:ALL
+* %groupname ALL=(ALL) NOPASSWD:ALL
+Запрещаем логин root-ом
+nano /etc/ssh/sshd_config
+* PermitRootLogin=no
+
+== Восстанавливаем привычное окружение ==
+Устанавливаем необходимое ПО
+* [common.txt]
+* [vcs/svn.txt]
+* [vcs/git.txt]
+* [vcs/git-config.txt]
+* [common-java.txt]
+Общие скрипты и конфиги
+* [[https://github.com/valery1707/dotfiles-test]]
+
+== Привязываем ip к домену ==
+* [service/no-ip.txt]
+
+== Настраиваем Hamachi ==
+* [service/hamachi.txt]
+
+== Контроль логов ==
+sudo apt-get install logwatch logcheck
+sudo apt-get install auditd
+sudo chmod 0750 /sbin/audispd
+sudo auditctl -w /etc/passwd -p war -k password-file
+sudo auditctl -w /etc/shadow -k shadow-file -p rwxa
+sudo auditctl -a exit,never -S mount
+
+== OpenVPN ==
+* [service/openvpn.txt]
