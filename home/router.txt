@@ -9,6 +9,8 @@
 
 
 == OptWare ==
+
+=== Первоначальная настройка ===
 Следуем инструкции "на сайте DD-WRT":http://www.dd-wrt.com/wiki/index.php/Optware%2C_the_Right_Way
 # Форматим флешку на (ext3:"Optware", swap:"Swap", ext3:"Data") "Инструкция":http://www.dd-wrt.com/wiki/index.php/How_to_-_Format_and_Partition_External_Storage_Device
 # Включаем поддержку в веб-морде Core USB Support, USB Storage Support, Automatic Drive Mount to /opt
@@ -16,16 +18,30 @@
 # Выполняем инициализацию optware (команды выполняются на роутере через telnet/ssh):
 #* wget -O /tmp/prep_optware http://wd.mirmana.com/prep_optware
 #* sh /tmp/prep_optware
-# Ставим дополнительно
+
+==== Ставим дополнительно ===
 #* ipkg-opt install nano
-# Останавливаем не нужное
+
+==== Останавливаем не нужное ====
 #* service twonky stop
 #* service twonky off
-# Запускаем нужное (необходимо для работы Network Printing, SWAT (web admin/config for samba) and OpenVPN)
+
+==== Запускаем нужное ====
+#необходимо для работы Network Printing, SWAT (web admin/config for samba) and OpenVPN)
 #* service xinetd on
 #* service xinetd start
 # Информация по пакетам: http://www.nslu2-linux.org/wiki/Optware/Packages?from=Unslung.Packages
 
+=== Обновляем ===
+ipkg-opt update
+ipkg-opt upgrade -test
+ipkg-opt upgrade
+
+=== Полезное ===
+# Список установленного
+ipkg-opt list_installed
+# поиск
+ipkg-opt search regexp
 
 == OpenDNS + No-IP ==
 Так как роутер может обновлять ip только на одном сервисе DDNS, а нам нужно новый IP отдавать и на NO-IP.com и на OpenDNS, то делаем так:
