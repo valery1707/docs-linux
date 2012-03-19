@@ -21,3 +21,6 @@ sudo apt-get install grub-customizer
 
 #Консольная утилита для анализа использования диска
 sudo apt-get install ncdu
+
+#Bleachbit — приложение-аналог CCleaner под Виндоус. Поможет почистить кэш, временные файлы и историю приложений. Выберите пункты галочками и нажмите “Удалить”.
+sudo apt-get install bleachbit
