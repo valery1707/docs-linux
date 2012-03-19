@@ -3,7 +3,7 @@
 * Element Hidding Helper для AdBlock Plus http://adblockplus.org/ru/elemhidehelper
 * Xmarks Sync https://services.addons.mozilla.org/ru/firefox/discovery/addon/xmarks-sync/
 * CheckPlaces (2.5.0)
-* FireShot http://screenshot-program.com/fireshot/
+* FireShot https://addons.mozilla.org/ru/firefox/addon/fireshot/
 * Google Shortcuts https://addons.mozilla.org/ru/firefox/addon/google-shortcuts-all-google-se/
 * Google Dictionary and Google Translate (2.5)
 * ImTranslator (4.01)
