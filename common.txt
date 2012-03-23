@@ -11,6 +11,9 @@ sudo apt-get install p7zip-full
 #Консольная утилита работы с архивами (aunpack, apack, als, acat)
 sudo apt-get install atool
 
+#Контрольные суммы (проверка: cfv; создание: cfv -C -tmd5 *.txt)
+sudo apt-get install cfv
+
 #Browser
 sudo apt-get install lynx
 
