@@ -24,3 +24,8 @@ sudo apt-get install ncdu
 
 #Bleachbit — приложение-аналог CCleaner под Виндоус. Поможет почистить кэш, временные файлы и историю приложений. Выберите пункты галочками и нажмите “Удалить”.
 sudo apt-get install bleachbit
+
+# http://ubuntu-tweak.com/
+sudo apt-get install python-compizconfig gir1.2-unique-3.0
+wget "http://launchpad.net/ubuntu-tweak/0.6.x/0.6.1/+download/ubuntu-tweak_0.6.1-1~oneiric1_all.deb"
+sudo dpkg -i ubuntu-tweak_0.6.1-1~oneiric1_all.deb
