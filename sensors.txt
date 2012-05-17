@@ -1,0 +1,13 @@
+# CPU etc.
+#install
+sudo apt-get install lm-sensors fancontrol
+#configure
+sudo sensors-detect
+#use
+sensors
+
+# HDD
+#intall
+sudo apt-get install hddtemp
+#use
+sudo hddtemp /dev/sd?
