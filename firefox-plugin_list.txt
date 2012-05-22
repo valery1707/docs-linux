@@ -52,8 +52,7 @@
 * Firebug Autocompleter https://addons.mozilla.org/ru/firefox/addon/firebug-autocompleter/
 * FireQuery https://addons.mozilla.org/ru/firefox/addon/firequery/
 * FireFlow https://addons.mozilla.org/ru/firefox/addon/fireflow/
-* Flashbug https://addons.mozilla.org/ru/firefox/addon/flashbug/
-* FlashFirebug (2.1)
+* FlashFirebug https://addons.mozilla.org/ru/firefox/addon/flashfirebug/
 * AMF Explorer https://addons.mozilla.org/ru/firefox/addon/amf-explorer/
 * Cert Viewer Plus (1.6)
 * Firecookie https://addons.mozilla.org/ru/firefox/addon/firecookie/
