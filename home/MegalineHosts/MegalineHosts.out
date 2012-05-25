@@ -1,53 +1,53 @@
 # Google User Content
-72.14.204.132	lh1.googleusercontent.com
-72.14.204.132	lh2.googleusercontent.com
-72.14.204.132	lh3.googleusercontent.com
-72.14.204.132	lh4.googleusercontent.com
-72.14.204.132	lh5.googleusercontent.com
-72.14.204.132	lh6.googleusercontent.com
-72.14.204.132	s0.googleusercontent.com
-72.14.204.132	s1.googleusercontent.com
-72.14.204.132	s2.googleusercontent.com
-72.14.204.132	ytimg.googleusercontent.com
+74.125.228.11	lh1.googleusercontent.com
+74.125.228.10	lh2.googleusercontent.com
+74.125.228.12	lh3.googleusercontent.com
+74.125.228.11	lh4.googleusercontent.com
+74.125.228.10	lh5.googleusercontent.com
+74.125.228.12	lh6.googleusercontent.com
+74.125.228.11	s0.googleusercontent.com
+74.125.228.10	s1.googleusercontent.com
+74.125.228.12	s2.googleusercontent.com
+74.125.228.11	ytimg.googleusercontent.com
 
 # Google Webcache
-72.14.204.132	webcache.googleusercontent.com
+74.125.228.10	webcache.googleusercontent.com
 
 # Google OpenSocial
-72.14.204.132	www-tt-opensocial.googleusercontent.com
-72.14.204.132	www-gm-opensocial.googleusercontent.com
-72.14.204.132	images0-focus-opensocial.googleusercontent.com
-72.14.204.132	images1-focus-opensocial.googleusercontent.com
-72.14.204.132	images2-focus-opensocial.googleusercontent.com
-72.14.204.132	images3-focus-opensocial.googleusercontent.com
-72.14.204.132	images-pos-opensocial.googleusercontent.com
-72.14.204.132	0-focus-opensocial.googleusercontent.com
-72.14.204.132	1-focus-opensocial.googleusercontent.com
-72.14.204.132	2-focus-opensocial.googleusercontent.com
-72.14.204.132	3-focus-opensocial.googleusercontent.com
+74.125.228.12	www-tt-opensocial.googleusercontent.com
+74.125.228.11	www-gm-opensocial.googleusercontent.com
+74.125.228.10	images0-focus-opensocial.googleusercontent.com
+74.125.228.12	images1-focus-opensocial.googleusercontent.com
+74.125.228.11	images2-focus-opensocial.googleusercontent.com
+74.125.228.10	images3-focus-opensocial.googleusercontent.com
+74.125.228.12	images-pos-opensocial.googleusercontent.com
+74.125.228.11	0-focus-opensocial.googleusercontent.com
+74.125.228.10	1-focus-opensocial.googleusercontent.com
+74.125.228.12	2-focus-opensocial.googleusercontent.com
+74.125.228.11	3-focus-opensocial.googleusercontent.com
 
 # Google ?
-72.14.204.132	clients1.googleusercontent.com
-72.14.204.132	clients2.googleusercontent.com
-72.14.204.132	lh3.ggpht.com
-72.14.204.132	lh4.ggpht.com
-72.14.204.132	lh5.ggpht.com
-72.14.204.132	lh6.ggpht.com
+74.125.228.10	clients1.googleusercontent.com
+74.125.228.12	clients2.googleusercontent.com
+74.125.228.11	lh3.ggpht.com
+74.125.228.10	lh4.ggpht.com
+74.125.228.12	lh5.ggpht.com
+74.125.228.11	lh6.ggpht.com
 
 # Google Translate
-72.14.204.132	translate.googleusercontent.com
+74.125.228.11	translate.googleusercontent.com
 
 # Google Mail
-72.14.204.132	mail-attachment.googleusercontent.com
-72.14.204.121	ghs.google.com
-72.14.204.121	ghs.l.google.com
+74.125.228.10	mail-attachment.googleusercontent.com
+74.125.131.121	ghs.google.com
+74.125.131.121	ghs.l.google.com
 
 # iGoogle
 173.194.73.103	gmodules.com
-72.14.204.132	img0.gmodules.com
-72.14.204.132	skins.gmodules.com
-72.14.204.132	ig.gmodules.com
-72.14.204.132	www.ig.gmodules.com
+74.125.228.12	img0.gmodules.com
+74.125.228.11	skins.gmodules.com
+74.125.228.10	ig.gmodules.com
+74.125.228.12	www.ig.gmodules.com
 
 # Livejournal Common
 208.93.0.128	livejournal.com
@@ -56,32 +56,32 @@
 208.93.0.128	cssproxy.livejournal.com
 208.93.0.128	p-userpic.livejournal.com
 208.93.1.14	stat.livejournal.com
-66.114.52.23	pics.livejournal.com
+66.114.52.22	pics.livejournal.com
 208.93.0.128	community.livejournal.com
 
 # Blogspot.com Common
-72.14.204.191	blogspot.com
+173.194.73.191	blogspot.com
 # Blogspot.com Users
-72.14.204.132	blogsofnote.blogspot.com
-72.14.204.132	funcall.blogspot.com
-72.14.204.132	drakulavich.blogspot.com
-72.14.204.132	fubarkrg.blogspot.com
-72.14.204.132	pentaho-tutorial.blogspot.com
-72.14.204.132	nabludashki.blogspot.com
+74.125.228.10	blogsofnote.blogspot.com
+74.125.228.12	funcall.blogspot.com
+74.125.228.11	drakulavich.blogspot.com
+74.125.228.10	fubarkrg.blogspot.com
+74.125.228.12	pentaho-tutorial.blogspot.com
+74.125.228.11	nabludashki.blogspot.com
 
 # Blogger.com Common
-72.14.204.191	blogger.com
-72.14.204.191	www.blogger.com
+173.194.73.191	blogger.com
+74.125.131.191	www.blogger.com
 
 # Blogblog.com Common
-72.14.204.191	blogblog.com
-72.14.204.191	www.blogblog.com
-72.14.204.191	img1.blogblog.com
+173.194.75.191	blogblog.com
+74.125.131.191	www.blogblog.com
+74.125.131.191	img1.blogblog.com
 
 # Ytimg.com
-74.125.228.66	s.ytimg.com
-74.125.228.78	i1.ytimg.com
-74.125.228.73	i2.ytimg.com
-74.125.228.72	i3.ytimg.com
-74.125.228.71	i4.ytimg.com
+74.125.228.7	s.ytimg.com
+74.125.228.4	i1.ytimg.com
+74.125.228.3	i2.ytimg.com
+74.125.228.2	i3.ytimg.com
+74.125.228.1	i4.ytimg.com
 
