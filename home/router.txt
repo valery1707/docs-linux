@@ -91,9 +91,9 @@ killall -q ddclient
 #!/bin/sh
 # Pull new file
 cd /opt/home/docs-linux
-git pull
+/opt/bin/git pull
 # Tell DNSMasq to reread configuration
-killall -HUP dnsmasq
+/opt/bin/killall -HUP dnsmasq
 </pre>
 
 == Cron ==
