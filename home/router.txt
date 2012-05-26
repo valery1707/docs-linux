@@ -79,6 +79,22 @@ killall -q ddclient
 #* service ddclient start
 # Теперь ddclient будет запускаться при старте роутера и каждые 300 секунд (=5 минут) обновлять данные на DNS-O-Matic, а он эти обновления будет сливать сразу и на OpenDNS и на NO-IP.
 
+== Мегалайн&Google+ ==
+# Клонируем проект с правильными IP-шниками на флешку:
+#* cd /opt/home
+#* git clone git://github.com/valery1707/docs-linux.git
+# Создаем ссылку на нужный нам файл в home:
+#* ln docs-linux/home/MegalineHosts/MegalineHosts.out
+# Создаем скрипт для обновления:
+#* nano /opt/home/megaline-update
+<pre>
+#!/bin/sh
+# Pull new file
+cd /opt/home/docs-linux
+git pull
+# Tell DNSMasq to reread configuration
+killall -HUP dnsmasq
+</pre>
 
 == Настройка Lan ==
 # Увел всю сеть на 10.17.6.*
