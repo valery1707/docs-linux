@@ -29,21 +29,21 @@
 # Google ?
 74.125.228.10	clients1.googleusercontent.com
 74.125.228.12	clients2.googleusercontent.com
-74.125.228.11	lh3.ggpht.com
-74.125.228.10	lh4.ggpht.com
-74.125.228.12	lh5.ggpht.com
-74.125.228.11	lh6.ggpht.com
+74.125.228.107	lh3.ggpht.com
+74.125.228.106	lh4.ggpht.com
+74.125.228.108	lh5.ggpht.com
+74.125.228.107	lh6.ggpht.com
 
 # Google Translate
 74.125.228.11	translate.googleusercontent.com
 
 # Google Mail
 74.125.228.10	mail-attachment.googleusercontent.com
-74.125.131.121	ghs.google.com
-74.125.131.121	ghs.l.google.com
+173.194.73.121	ghs.google.com
+173.194.73.121	ghs.l.google.com
 
 # iGoogle
-173.194.73.103	gmodules.com
+74.125.131.99	gmodules.com
 74.125.228.12	img0.gmodules.com
 74.125.228.11	skins.gmodules.com
 74.125.228.10	ig.gmodules.com
@@ -56,32 +56,32 @@
 208.93.0.128	cssproxy.livejournal.com
 208.93.0.128	p-userpic.livejournal.com
 208.93.1.14	stat.livejournal.com
-66.114.52.22	pics.livejournal.com
+66.114.52.40	pics.livejournal.com
 208.93.0.128	community.livejournal.com
 
 # Blogspot.com Common
-173.194.73.191	blogspot.com
+74.125.131.191	blogspot.com
 # Blogspot.com Users
-74.125.228.10	blogsofnote.blogspot.com
-74.125.228.12	funcall.blogspot.com
-74.125.228.11	drakulavich.blogspot.com
-74.125.228.10	fubarkrg.blogspot.com
-74.125.228.12	pentaho-tutorial.blogspot.com
-74.125.228.11	nabludashki.blogspot.com
+74.125.228.74	blogsofnote.blogspot.com
+74.125.228.76	funcall.blogspot.com
+74.125.228.75	drakulavich.blogspot.com
+74.125.228.74	fubarkrg.blogspot.com
+74.125.228.76	pentaho-tutorial.blogspot.com
+74.125.228.75	nabludashki.blogspot.com
 
 # Blogger.com Common
-173.194.73.191	blogger.com
+173.194.75.191	blogger.com
 74.125.131.191	www.blogger.com
 
 # Blogblog.com Common
-173.194.75.191	blogblog.com
+173.194.73.191	blogblog.com
 74.125.131.191	www.blogblog.com
 74.125.131.191	img1.blogblog.com
 
 # Ytimg.com
-74.125.228.7	s.ytimg.com
-74.125.228.4	i1.ytimg.com
-74.125.228.3	i2.ytimg.com
-74.125.228.2	i3.ytimg.com
-74.125.228.1	i4.ytimg.com
+74.125.228.3	s.ytimg.com
+74.125.228.64	i1.ytimg.com
+74.125.228.78	i2.ytimg.com
+74.125.228.73	i3.ytimg.com
+74.125.228.72	i4.ytimg.com
 
