@@ -96,6 +96,14 @@ git pull
 killall -HUP dnsmasq
 </pre>
 
+== Cron ==
+# http://www.dd-wrt.com/wiki/index.php/CRON
+# Список задач прописывается в веб интерфейсе в Administration->Management
+# Формат: %minute (0-59)% %hour (0-23)% %day of the month (1-31)% %month of the year (1-12)% %day of the week (0-6 with 0=Sunday)% root %commands%
+# Поле "root" указывает под каким пользователем выполнять команды
+# Пути до команд нужно указывать полные, так как при запуске через cron $PATH может не содержать всех путей
+
+
 == Настройка Lan ==
 # Увел всю сеть на 10.17.6.*
 # Сам роутер будет теперь 10.17.6.1
