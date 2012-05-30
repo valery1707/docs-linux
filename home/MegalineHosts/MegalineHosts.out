@@ -1,53 +1,53 @@
 # Google User Content
-74.125.228.11	lh1.googleusercontent.com
-74.125.228.10	lh2.googleusercontent.com
-74.125.228.12	lh3.googleusercontent.com
-74.125.228.11	lh4.googleusercontent.com
-74.125.228.10	lh5.googleusercontent.com
-74.125.228.12	lh6.googleusercontent.com
-74.125.228.11	s0.googleusercontent.com
-74.125.228.10	s1.googleusercontent.com
-74.125.228.12	s2.googleusercontent.com
-74.125.228.11	ytimg.googleusercontent.com
+74.125.228.42	lh1.googleusercontent.com
+74.125.228.44	lh2.googleusercontent.com
+74.125.228.43	lh3.googleusercontent.com
+74.125.228.42	lh4.googleusercontent.com
+74.125.228.44	lh5.googleusercontent.com
+74.125.228.43	lh6.googleusercontent.com
+74.125.228.42	s0.googleusercontent.com
+74.125.228.44	s1.googleusercontent.com
+74.125.228.43	s2.googleusercontent.com
+74.125.228.42	ytimg.googleusercontent.com
 
 # Google Webcache
-74.125.228.10	webcache.googleusercontent.com
+74.125.228.44	webcache.googleusercontent.com
 
 # Google OpenSocial
-74.125.228.12	www-tt-opensocial.googleusercontent.com
-74.125.228.11	www-gm-opensocial.googleusercontent.com
-74.125.228.10	images0-focus-opensocial.googleusercontent.com
-74.125.228.12	images1-focus-opensocial.googleusercontent.com
-74.125.228.11	images2-focus-opensocial.googleusercontent.com
-74.125.228.10	images3-focus-opensocial.googleusercontent.com
-74.125.228.12	images-pos-opensocial.googleusercontent.com
-74.125.228.11	0-focus-opensocial.googleusercontent.com
-74.125.228.10	1-focus-opensocial.googleusercontent.com
-74.125.228.12	2-focus-opensocial.googleusercontent.com
-74.125.228.11	3-focus-opensocial.googleusercontent.com
+74.125.228.43	www-tt-opensocial.googleusercontent.com
+74.125.228.42	www-gm-opensocial.googleusercontent.com
+74.125.228.44	images0-focus-opensocial.googleusercontent.com
+74.125.228.43	images1-focus-opensocial.googleusercontent.com
+74.125.228.42	images2-focus-opensocial.googleusercontent.com
+74.125.228.44	images3-focus-opensocial.googleusercontent.com
+74.125.228.43	images-pos-opensocial.googleusercontent.com
+74.125.228.42	0-focus-opensocial.googleusercontent.com
+74.125.228.44	1-focus-opensocial.googleusercontent.com
+74.125.228.43	2-focus-opensocial.googleusercontent.com
+74.125.228.42	3-focus-opensocial.googleusercontent.com
 
 # Google ?
-74.125.228.10	clients1.googleusercontent.com
-74.125.228.12	clients2.googleusercontent.com
+74.125.228.44	clients1.googleusercontent.com
+74.125.228.43	clients2.googleusercontent.com
 74.125.228.107	lh3.ggpht.com
 74.125.228.106	lh4.ggpht.com
 74.125.228.108	lh5.ggpht.com
 74.125.228.107	lh6.ggpht.com
 
 # Google Translate
-74.125.228.11	translate.googleusercontent.com
+74.125.228.42	translate.googleusercontent.com
 
 # Google Mail
-74.125.228.10	mail-attachment.googleusercontent.com
+74.125.228.44	mail-attachment.googleusercontent.com
 173.194.73.121	ghs.google.com
 173.194.73.121	ghs.l.google.com
 
 # iGoogle
-74.125.131.99	gmodules.com
-74.125.228.12	img0.gmodules.com
-74.125.228.11	skins.gmodules.com
-74.125.228.10	ig.gmodules.com
-74.125.228.12	www.ig.gmodules.com
+173.194.73.103	gmodules.com
+74.125.228.43	img0.gmodules.com
+74.125.228.42	skins.gmodules.com
+74.125.228.44	ig.gmodules.com
+74.125.228.43	www.ig.gmodules.com
 
 # Livejournal Common
 208.93.0.128	livejournal.com
@@ -56,32 +56,32 @@
 208.93.0.128	cssproxy.livejournal.com
 208.93.0.128	p-userpic.livejournal.com
 208.93.1.14	stat.livejournal.com
-66.114.52.40	pics.livejournal.com
+66.114.52.22	pics.livejournal.com
 208.93.0.128	community.livejournal.com
 
 # Blogspot.com Common
-74.125.131.191	blogspot.com
+173.194.73.191	blogspot.com
 # Blogspot.com Users
-74.125.228.74	blogsofnote.blogspot.com
-74.125.228.76	funcall.blogspot.com
-74.125.228.75	drakulavich.blogspot.com
-74.125.228.74	fubarkrg.blogspot.com
-74.125.228.76	pentaho-tutorial.blogspot.com
-74.125.228.75	nabludashki.blogspot.com
+173.194.37.43	blogsofnote.blogspot.com
+173.194.37.42	funcall.blogspot.com
+173.194.37.44	drakulavich.blogspot.com
+173.194.37.43	fubarkrg.blogspot.com
+173.194.37.42	pentaho-tutorial.blogspot.com
+173.194.37.44	nabludashki.blogspot.com
 
 # Blogger.com Common
 173.194.75.191	blogger.com
-74.125.131.191	www.blogger.com
+74.125.137.191	www.blogger.com
 
 # Blogblog.com Common
 173.194.73.191	blogblog.com
-74.125.131.191	www.blogblog.com
-74.125.131.191	img1.blogblog.com
+74.125.137.191	www.blogblog.com
+74.125.137.191	img1.blogblog.com
 
 # Ytimg.com
-74.125.228.3	s.ytimg.com
-74.125.228.64	i1.ytimg.com
-74.125.228.78	i2.ytimg.com
-74.125.228.73	i3.ytimg.com
-74.125.228.72	i4.ytimg.com
+74.125.228.99	s.ytimg.com
+74.125.228.96	i1.ytimg.com
+74.125.228.110	i2.ytimg.com
+74.125.228.105	i3.ytimg.com
+74.125.228.104	i4.ytimg.com
 
