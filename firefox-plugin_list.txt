@@ -24,6 +24,7 @@
 ** Gcache+ https://addons.mozilla.org/ru/firefox/addon/gcache-13694/
 * Ghostery https://addons.mozilla.org/ru/firefox/addon/ghostery/
 * View Cookies https://addons.mozilla.org/ru/firefox/addon/view-cookies/
+* SixOrNot https://addons.mozilla.org/ru/firefox/addon/sixornot/
 
 == Common-download ==
 * DownThemAll! (2.0.2)
