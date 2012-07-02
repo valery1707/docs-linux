@@ -14,6 +14,7 @@
 * -Fastest Search https://addons.mozilla.org/ru/firefox/addon/fastest-search/
 * Shorten URL https://addons.mozilla.org/ru/firefox/addon/shorten-url/
 * AutoCopy https://addons.mozilla.org/ru/firefox/addon/autocopy/
+* Stop YouTube Autoplay https://addons.mozilla.org/ru/firefox/addon/stop-youtube-autoplay/
 
 == Network ==
 * Flagfox https://addons.mozilla.org/ru/firefox/addon/flagfox/
