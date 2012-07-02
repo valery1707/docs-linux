@@ -5,45 +5,45 @@
 * CheckPlaces (2.5.0)
 * FireShot https://addons.mozilla.org/ru/firefox/addon/fireshot/
 * Google Shortcuts https://addons.mozilla.org/ru/firefox/addon/google-shortcuts-all-google-se/
-* Google Dictionary and Google Translate (2.5)
-* ImTranslator (4.01)
+* -Google Dictionary and Google Translate (2.5)
+* -ImTranslator (4.01)
 * Mozilla Archive Format http://maf.mozdev.org/
-* PDF Download (3.0.0.2)
+* -PDF Download (3.0.0.2)
 * Redirect Remover https://addons.mozilla.org/ru/firefox/addon/redirect-remover/
-* RetailMeNot https://addons.mozilla.org/en-US/firefox/addon/retailmenot/
+* -RetailMeNot https://addons.mozilla.org/en-US/firefox/addon/retailmenot/
 * -Fastest Search https://addons.mozilla.org/ru/firefox/addon/fastest-search/
-* Shorten URL https://addons.mozilla.org/ru/firefox/addon/shorten-url/
+* -Shorten URL https://addons.mozilla.org/ru/firefox/addon/shorten-url/
 * AutoCopy https://addons.mozilla.org/ru/firefox/addon/autocopy/
 * Stop YouTube Autoplay https://addons.mozilla.org/ru/firefox/addon/stop-youtube-autoplay/
 
 == Network ==
 * Flagfox https://addons.mozilla.org/ru/firefox/addon/flagfox/
-* Download statusbar https://addons.mozilla.org/ru/firefox/addon/download-statusbar/
 * FoxyProxy Standard https://addons.mozilla.org/ru/firefox/addon/foxyproxy-standard/contribute/roadblock/
-** CacheViewer https://addons.mozilla.org/ru/firefox/addon/cacheviewer-continued/
+* -CacheViewer https://addons.mozilla.org/ru/firefox/addon/cacheviewer-continued/
 * CacheIt! https://addons.mozilla.org/ru/firefox/addon/cacheit/
-** Gcache+ https://addons.mozilla.org/ru/firefox/addon/gcache-13694/
+* -Gcache+ https://addons.mozilla.org/ru/firefox/addon/gcache-13694/
 * Ghostery https://addons.mozilla.org/ru/firefox/addon/ghostery/
 * View Cookies https://addons.mozilla.org/ru/firefox/addon/view-cookies/
 * SixOrNot https://addons.mozilla.org/ru/firefox/addon/sixornot/
 
 == Common-download ==
-* DownThemAll! (2.0.2)
-* FlashGot (1.2.9.2)
-* NetVideoHunter (1.7)
+* Download statusbar https://addons.mozilla.org/ru/firefox/addon/download-statusbar/
+* -DownThemAll! (2.0.2)
+* -FlashGot (1.2.9.2)
+* -NetVideoHunter (1.7)
 * Easy YouTube Video Downloader https://addons.mozilla.org/ru/firefox/addon/easy-youtube-video-downl-10137/
 
 == Common-GUI extend ==
-* Better Gmail 2 (1.2)
+* -Better Gmail 2 (1.2)
 * FireGestures https://addons.mozilla.org/ru/firefox/addon/firegestures/
-* Flashblock (1.5.14.2)
-* ImgLikeOpera (0.6.21)
-* Flash Game Maximizer
-* SwiffOut (1.6.0.8)
+* -Flashblock (1.5.14.2)
+* -ImgLikeOpera (0.6.21)
+* -Flash Game Maximizer
+* -SwiffOut (1.6.0.8)
 * RSS Icon https://addons.mozilla.org/ru/firefox/addon/rss-icon/
-* Plus One Button https://addons.mozilla.org/ru/firefox/addon/plus-one-button/
-* Tab Mix Plus https://addons.mozilla.org/ru/firefox/addon/tab-mix-plus/
-* Foobar https://addons.mozilla.org/ru/firefox/addon/foobar/
+* -Plus One Button https://addons.mozilla.org/ru/firefox/addon/plus-one-button/
+* -Tab Mix Plus https://addons.mozilla.org/ru/firefox/addon/tab-mix-plus/
+* -Foobar https://addons.mozilla.org/ru/firefox/addon/foobar/
 * Speed Dial https://addons.mozilla.org/ru/firefox/addon/speed-dial/
 
 == Web-developer ==
@@ -62,14 +62,14 @@
 
 == Web-analyze ==
 * BuiltWith https://addons.mozilla.org/en-us/firefox/addon/builtwith/
-* WorldIp (2.1.5)
-* Wappalyzer (1.13.0)
-* YSlow (2.1.0)
-* Просмотр HTTP-заголовков (0.16)
-* Header Spy (1.3.4.2)
-* Html Validator (0.9.0.4)
-* SenSEO (1.5.5)
-* Extended Statusbar (1.5.7)
+* -WorldIp (2.1.5)
+* -Wappalyzer (1.13.0)
+* -YSlow (2.1.0)
+* -Просмотр HTTP-заголовков (0.16)
+* -Header Spy (1.3.4.2)
+* -Html Validator (0.9.0.4)
+* -SenSEO (1.5.5)
+* -Extended Statusbar (1.5.7)
 
 == System ==
 * Java Quick Starter (1.0)
