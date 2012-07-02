@@ -36,6 +36,7 @@
 ipkg-opt update
 ipkg-opt upgrade -test
 ipkg-opt upgrade
+cd /opt/home && ipkg-opt upgrade | tee -a `date --rfc-3339=date`_upgrade.log
 
 === Полезное ===
 # Список установленного
