@@ -1,0 +1,14 @@
+{
+    "createdBy": "Redirector v2.7.1",
+    "createdAt": "2012-07-23T09:12:12.965Z",
+    "redirects": [
+        {
+            "exampleUrl": "http://dnevnik-kamnya.livejournal.com/",
+            "includePattern": "http://([^\\.]+).livejournal.com/",
+            "excludePattern": "",
+            "redirectUrl": "http://$1.livejournal.com.nyud.net/",
+            "patternType": "R",
+            "disabled": false
+        }
+    ]
+}
