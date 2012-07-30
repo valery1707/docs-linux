@@ -51,11 +51,17 @@ sudo apt-get install x2goserver
 cd /srv/ftp
 ##/etc/rc.local
 mount --bind /media/merged_video/ /srv/ftp/Video
+mount -o remount,ro /srv/ftp/Video
 mount --bind /media/merged_distr/ /srv/ftp/Distr
+mount -o remount,ro /srv/ftp/Distr
 mount --bind /media/merged_downloads/ /srv/ftp/Downloads
+mount -o remount,ro /srv/ftp/Downloads
 mount --bind /media/merged_music/ /srv/ftp/Music
+mount -o remount,ro /srv/ftp/Music
 mount --bind /media/merged_foto/ /srv/ftp/Foto
+mount -o remount,ro /srv/ftp/Foto
 mount --bind /srv/www/www_hosts/main/NOD32view/ /srv/ftp/NOD32view
+mount -o remount,ro /srv/ftp/NOD32view
 
 === Samba ===
 #include: https://help.ubuntu.com/11.10/serverguide/C/samba-fileserver.html
