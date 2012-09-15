@@ -1,5 +1,6 @@
 # Устанавливаем и конфигурируем
 sudo apt-get install noip2
+Или установить бинарный пакет из https://launchpad.net/ubuntu/precise/+package/noip2
 
 # Если при установке возникли проблемы (чаще всего связанные с не созданным файлом конфигурации), то настраиваем в ручную
 sudo /etc/init.d/noip2 stop
