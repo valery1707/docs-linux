@@ -1,4 +1,5 @@
 sudo apt-get install openjdk-6-jre openjdk-6-jdk icedtea6-plugin
+sudo apt-get install openjdk-7-jre openjdk-7-jdk icedtea-7-plugin
 
 sudo apt-get install ant
 
