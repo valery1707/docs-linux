@@ -1,5 +1,8 @@
 sudo apt-get install ubuntu-restricted-extras
 
+#Добавляет в том числе и add-apt-repository
+sudo apt-get install python-software-properties
+
 # curl, wget, wput
 sudo apt-get install curl wget wput
 
