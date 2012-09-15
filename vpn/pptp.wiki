@@ -1,0 +1,31 @@
+# source: http://www.dikant.de/2010/10/08/setting-up-a-vpn-server-on-amazon-ec2/
+
+sudo aptitude install pptpd
+
+#First you to define an IP address range which will be used for connected clients.
+#This can be any IP range, but keep in mind, if you want to avoid routing problems, choose a private IP range.
+sudo nano /etc/pptpd.conf
+>localip 10.17.7.1
+>remoteip 10.17.7.5-15
+
+#It is also a good idea to specify the address of at least one DNS server.
+#You can use the DNS server of amazon (172.16.0.23) or the Google Public DNS
+sudo nano /etc/ppp/pptpd-options
+>ms-dns 8.8.8.8
+>ms-dns 8.8.4.4
+
+#The last step for configuring the pptpd-daemon is to add a user account for the service
+echo "USERNAME pptpd PASSWORD *" | sudo tee -a /etc/ppp/chap-secrets
+
+#Now restart the pptp-daemon
+sudo service pptpd restart
+
+#To enable packet forwarding, uncomment the following line in /etc/sysctl.conf
+>net.ipv4.ip_forward=1
+#Now reload this config
+sudo sysctl -p
+
+#The last step is to enable network address translation
+sudo iptables -t nat -A POSTROUTING -o eth0 -j MASQUERADE
+#This setting is reset on every reboot, so make sure that you add the following line above exit 0 in the file /etc/rc.local
+>iptables -t nat -A POSTROUTING -o eth0 -j MASQUERADE
