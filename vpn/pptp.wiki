@@ -21,6 +21,7 @@ echo "USERNAME pptpd PASSWORD *" | sudo tee -a /etc/ppp/chap-secrets
 sudo service pptpd restart
 
 #To enable packet forwarding, uncomment the following line in /etc/sysctl.conf
+sudo nano /etc/sysctl.conf
 >net.ipv4.ip_forward=1
 #Now reload this config
 sudo sysctl -p
@@ -28,4 +29,5 @@ sudo sysctl -p
 #The last step is to enable network address translation
 sudo iptables -t nat -A POSTROUTING -o eth0 -j MASQUERADE
 #This setting is reset on every reboot, so make sure that you add the following line above exit 0 in the file /etc/rc.local
+sudo nano /etc/rc.local
 >iptables -t nat -A POSTROUTING -o eth0 -j MASQUERADE
