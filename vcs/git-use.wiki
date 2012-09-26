@@ -41,7 +41,7 @@ IDEA:
 
 ==== 4. Удаление ветки ====
 CLI:
-  git branche -d feature-name
+  git branch -d feature-name
 IDEA:
   ???
 
