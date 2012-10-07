@@ -1,0 +1,64 @@
+== Системное ==
+* BusyBox https://play.google.com/store/apps/details?id=stericson.busybox
+* ROM Manager https://play.google.com/store/apps/details?id=com.koushikdutta.rommanager
+* Link2SD https://play.google.com/store/apps/details?id=com.buak.Link2SD
+* SD Maid - Очистка системы https://play.google.com/store/apps/details?id=eu.thedarken.sdm
+* Superuser https://play.google.com/store/apps/details?id=com.noshufou.android.su
+
+
+== Тесты ==
+* AnTuTu Benchmark https://play.google.com/store/apps/details?id=com.antutu.ABenchMark
+* AnTuTu Tester https://play.google.com/store/apps/details?id=com.antutu.tester
+* Android System Info https://play.google.com/store/apps/details?id=com.electricsheep.asi
+* GPS Test https://play.google.com/store/apps/details?id=com.chartcross.gpstest
+* Multitouch Test https://play.google.com/store/apps/details?id=de.greenrobot.multitouchtest
+* Speedtest.net Mobile https://play.google.com/store/apps/details?id=org.zwanoo.android.speedtest
+* Wifi Analyzer https://play.google.com/store/apps/details?id=com.farproc.wifi.analyzer
+* Wifi Connecter Library https://play.google.com/store/apps/details?id=com.farproc.wifi.connecter
+* Z - Device Test https://play.google.com/store/apps/details?id=zausan.zdevicetest
+
+
+== Утилиты ==
+* Battery Mix https://play.google.com/store/apps/details?id=jp.smapho.battery_mix
+* ES Проводник https://play.google.com/store/apps/details?id=com.estrongs.android.pop
+* OI File Manager https://play.google.com/store/apps/details?id=org.openintents.filemanager
+* KeePassDroid https://play.google.com/store/apps/details?id=com.android.keepass
+* MobileFox https://play.google.com/store/apps/details?id=ru.FoxGSM
+* MobileFox Pro https://play.google.com/store/apps/details?id=ru.FoxGSM.Licensing
+* ixMAT Barcode Scanner https://play.google.com/store/apps/details?id=com.ixellence.ixmat.android.community
+* Шумомер - Sound Meter https://play.google.com/store/apps/details?id=kr.sira.sound
+* Дальномер https://play.google.com/store/apps/details?id=kr.sira.measure
+* Google Goggles https://play.google.com/store/apps/details?id=com.google.android.apps.unveil
+* Wi-fi QR Генератор кода https://play.google.com/store/apps/details?id=com.madeng.wifiqr
+* Калькулятор++ https://play.google.com/store/apps/details?id=org.solovyev.android.calculator
+* Фонарик - Tiny Flashlight ® https://play.google.com/store/apps/details?id=com.devuni.flashlight
+
+
+== Картографическое ==
+* OsmAnd https://play.google.com/store/apps/details?id=net.osmand
+* Карты https://play.google.com/store/apps/details?id=com.google.android.apps.maps
+
+
+== Социальное ==
+* Gmail https://play.google.com/store/apps/details?id=com.google.android.gm
+* Instagram https://play.google.com/store/apps/details?id=com.instagram.android
+* LinkedIn https://play.google.com/store/apps/details?id=com.linkedin.android
+* RunKeeper https://play.google.com/store/apps/details?id=com.fitnesskeeper.runkeeper.pro
+* Skype https://play.google.com/store/apps/details?id=com.skype.raider
+* Диск Google https://play.google.com/store/apps/details?id=com.google.android.apps.docs
+* Google+ https://play.google.com/store/apps/details?id=com.google.android.apps.plus
+* TweetDeck https://play.google.com/store/apps/details?id=com.thedeck.android.app
+
+
+== Продвинутое ==
+* Android Terminal Emulator https://play.google.com/store/apps/details?id=jackpal.androidterm
+* ClockSync https://play.google.com/store/apps/details?id=ru.org.amip.ClockSync
+* ES Диспетчер задач https://play.google.com/store/apps/details?id=com.estrongs.android.taskmanager
+
+
+== Игры ==
+* Angry Birds Space https://play.google.com/store/apps/details?id=com.rovio.angrybirdsspace.ads
+* Bad Piggies https://play.google.com/store/apps/details?id=com.rovio.BadPiggies&feature=featured-apps
+* Clouds & Sheep https://play.google.com/store/apps/details?id=com.hg.cloudsandsheepfree
+* Dice https://play.google.com/store/apps/details?id=com.teazel
+
