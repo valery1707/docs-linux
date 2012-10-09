@@ -31,3 +31,7 @@ sudo iptables -t nat -A POSTROUTING -o eth0 -j MASQUERADE
 #This setting is reset on every reboot, so make sure that you add the following line above exit 0 in the file /etc/rc.local
 sudo nano /etc/rc.local
 >iptables -t nat -A POSTROUTING -o eth0 -j MASQUERADE
+
+#На OpenVZ не виртуализируется MASQUERADE, так что для него можно использовать другие правила:
+#http://forum.openvz.org/index.php?t=msg&th=1460&goto=45251&#msg_45251
+sudo iptables -t nat -A POSTROUTING -j SNAT --to-source <venet's IP>
