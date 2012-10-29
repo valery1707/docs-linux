@@ -2,7 +2,7 @@
 3*3
 
 == Группа 1 ==
-http://happy-no-housoku-test.com:8080/
+http://jenkins.yoyaku-navi-test.jp/
 https://www.assembla.com/spaces/wrsystem/tickets?utf8=%E2%9C%93&batch=false&tickets_report_id=u88943&ticket_id=
 https://www.assembla.com/spaces/wrsystem/tickets?utf8=%E2%9C%93&batch=false&tickets_report_id=u231453&ticket_id=
 http://localhost:8080/
