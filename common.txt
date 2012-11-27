@@ -36,3 +36,11 @@ sudo apt-get install bleachbit
 sudo add-apt-repository ppa:tualatrix/ppa
 sudo apt-get update
 sudo apt-get install ubuntu-tweak
+
+# Файловые менеджеры
+#Double Commander http://doublecmd.sourceforge.net/
+#muCommander http://www.mucommander.com/
+#Sunflower http://www.ubuntugeek.com/sunflower-fm-twin-panel-file-manager-for-linux.html
+sudo add-apt-repository ppa:atareao/sunflower
+sudo apt-get update
+sudo apt-get install sunflower 
