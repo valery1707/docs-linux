@@ -1,0 +1,30 @@
+http://www.neorouter.com/
+
+== Сервер ==
+
+=== Установка ===
+# Скачиваем пакет с http://www.neorouter.com/Downloads_nrfree.html#linux
+wget http://download.neorouter.com/Downloads/NRFree/Update_1.7.1.3430/Linux/Ubuntu/nrserver-1.7.1.3430-free-ubuntu-i386.deb
+sudo dpkg -i nrserver-1.7.1.3430-free-ubuntu-i386.deb
+
+
+
+=== Настройка ===
+# Пробрасываем порт TCP 32976
+# Создаем новый домен: https://www.neorouter.com/Dashboard/CreateDomain.aspx
+# Подключаем сервер к домену
+sudo nrserver -setdomain <domain name> <domain password>
+
+# Добавляем пользователей
+sudo nrserver -adduser <login> <password> [admin|user]
+
+
+== Клиент ==
+
+=== Установка ===
+# Скачиваем пакет с http://www.neorouter.com/Downloads_nrfree.html#linux
+wget http://download.neorouter.com/Downloads/NRFree/Update_1.7.0.3300/Linux/Ubuntu/nrclient-1.7.0.3300-free-ubuntu-i386.deb
+sudo dpkg -i nrclient-1.7.0.3300-free-ubuntu-i386.deb
+
+
+=== Настройка ===
