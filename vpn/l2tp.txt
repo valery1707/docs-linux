@@ -3,3 +3,4 @@
 * Работает поверх TCP/IP (1701/TCP, 1701/UDP)
 * Нативно поддерживается Android (2.3.5)
 
+pptp: http://www.pvsm.ru/it-infrastruktura/6506
