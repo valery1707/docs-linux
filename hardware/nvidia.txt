@@ -1,0 +1,17 @@
+Failed to load module "nv" (module does not exist, 0)
+
+http://askubuntu.com/questions/113993/ubuntu-11-10-nvidia-module-failed-to-load-no-module-exists
+
+Make sure you have headers for your kernel installed - without this one, you will not be able to build nvidia module.
+
+sudo apt-get install linux-headers-`uname -r`
+
+Then, run
+
+sudo dpkg-reconfigure nvidia-current
+
+After all, run
+
+sudo nvidia-xconfig
+
+or restore your original xorg.conf.
