@@ -1,3 +1,6 @@
+sudo apt-get install pdftk
+# Вырезать страницы: pdftk in.pdf cat 3-5 output out.pdf
+
 sudo apt-get install xpdf
 
 # http://the-bosha.ru/2010/03/23/zathura/
