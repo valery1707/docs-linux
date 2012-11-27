@@ -1,0 +1,2 @@
+# source: http://www.cryptocracy.com/blog/2012/05/13/ipsec-slash-l2tp-vpn-server-with-ubuntu-precise/
+http://doc.zentyal.org/en/
