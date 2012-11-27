@@ -1,0 +1,5 @@
+#httsp://wiki.ubuntu.com/ServerTeam/Jenkins
+
+sudo add-apt-repository ppa:hudson-ubuntu/testing
+sudo apt-get update
+sudo apt-get install jenkins
