@@ -23,6 +23,7 @@ sudo apt-get install htop iotop atop
 ##hdd_3 => 240 Гб
 ##hdd_4 => 80-ка Банзая
 ##hdd_5 => 2 Тб
+##hdd_6 => 640 Гб. Мой бывший мобильный винт
 
 #include: /file_systems/mhddfs.txt
 ##/etc/rc.local
