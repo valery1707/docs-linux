@@ -13,10 +13,10 @@ sudo dpkg -i nrserver-1.7.1.3430-free-ubuntu-i386.deb
 # Пробрасываем порт TCP 32976
 # Создаем новый домен: https://www.neorouter.com/Dashboard/CreateDomain.aspx
 # Подключаем сервер к домену
-sudo nrserver -setdomain <domain name> <domain password>
+sudo nrserver -setdomain %domain name% %domain password%
 
 # Добавляем пользователей
-sudo nrserver -adduser <login> <password> [admin|user]
+sudo nrserver -adduser %login% %password% [admin|user]
 
 
 == Клиент ==
@@ -28,3 +28,5 @@ sudo dpkg -i nrclient-1.7.0.3300-free-ubuntu-i386.deb
 
 
 === Настройка ===
+
+sudo nrclientcmd -d %domain name% -u %user name% -p %password% register
