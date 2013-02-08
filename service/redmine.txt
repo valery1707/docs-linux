@@ -1,9 +1,121 @@
-http://www.redmine.org/projects/redmine/wiki/HowTo_Install_Redmine_in_Ubuntu
+# Устанавливаем ruby 1.9.x и мета пакет для сборки (может понадобиться при установке gem-ов)
+sudo apt-get install ruby1.9.1-full build-essential
 
+# Добавляем PPA содержащий deb-пакет с Redmine
 sudo add-apt-repository ppa:ondrej/redmine
 sudo apt-get update
-sudo apt-get install redmine
 
-dpkg-reconfigure -plow redmine
+# Устанавливаем Redmine из PPA: https://launchpad.net/~ondrej/+archive/redmine
+# При установке сразу будет сконфигурировано подключение к СУБД, которая уже должна быть установлена.
+# Для интеграции с разными СУБД используются разные пакеты: redmine-pgsql, redmine-mysql, redmine-sqlite
+# После настройки подключения к СУБД будет автоматически создана база (migrate) и загружено первоначальное наполнение
+# Подключение к СУБД можно перенастроить командой: sudo dpkg-reconfigure -plow redmine
+sudo apt-get install redmine redmine-pgsql imagemagick ruby-rmagick
 
-sudo apt-get install libapache2-mod-passenger
+# Redmine будет установлено следующие директории:
+## /usr/share/redmine/ - само приложение
+## /etc/redmine/default/ - конфигурационные файлы
+## /var/lib/redmine/default/ - files
+
+# У меня зачем-то установился ruby1.8 (ruby 1.8.7 (2011-06-30 patchlevel 352)) - удаляем
+sudo apt-get remove ruby1.8 ruby1.8-dev libruby1.8
+sudo apt-get autoremove
+
+# Создаем директории которые не были созданы при установке пакета
+sudo mkdir /usr/share/redmine/tmp && sudo chown www-data:www-data /usr/share/redmine/tmp && sudo chmod a-x,u+rw,g+rw /usr/share/redmine/tmp
+
+# Сейчас уже можно проверить как работает Redmine (будет доступен тут: http://localhost:3000/)
+# Предупреждение: я меня под пользователем www-data оно так и не запустилось, только под root-ом. Падает с ошибкой доступа при создании папки /usr/share/redmine/tmp/cache
+sudo -u www-data ruby /usr/share/redmine/script/rails server -e production -b 0.0.0.0
+
+# Устанавливаем rails и unicorn
+sudo gem install rails unicorn
+
+# Создаём файл настроек для unicorn
+sudo curl -o /usr/share/redmine/config/unicorn.conf.rb https://raw.github.com/defunkt/unicorn/master/examples/unicorn.conf.rb
+
+# Выставляем нужные нам параметры:
+sudo nano /usr/share/redmine/config/unicorn.conf.rb
+> user "www-data", "www-data"
+> working_directory "/usr/share/redmine"
+> listen "/tmp/redmine_unicorn.sock", :backlog => 64
+> listen 8080, :tcp_nopush => true
+> pid "/var/run/redmine_unicorn.pid"
+> stderr_path "/var/log/redmine_unicorn.stderr.log"
+> stdout_path "/var/log/redmine_unicorn.stdout.log"
+
+# Запускаем unicorn для проверки (будет доступен тут: http://localhost:8080/)
+sudo unicorn_rails -c /usr/share/redmine/config/unicorn.conf.rb -E production
+
+# Вот Redmine и запущен. Счастье и радость :)
+# Следующая задача: запустить Redmine в "поддиректории".
+# В текущей конфигурации Redmine будет работать только в корне сайта, что нам не подходит, так как кроме Redmine у нас на сайте еще много чего крутится.
+# И вот тут начинается "магия" :)
+# Работающее на данный момент решение этой проблемы скомпилировано из разных частей решений описанных:
+## Официальной wiki Redmine: http://www.redmine.org/projects/redmine/wiki/HowTo_Install_Redmine_in_a_sub-URI
+## Тикета с ошибкой Redmine: http://www.redmine.org/issues/12102
+## Еще одного тикета и пары страниц в инете, я их уже забыл :)
+
+# Редактируем окружение Redmine:
+## До запуска приложения вставляем: RedmineApp::Application.routes.default_scope =  { :path => '/redmine', :shallow_path => '/redmine' }
+## После запуска приложения вставляем: Redmine::Utils::relative_url_root = "/redmine"
+sudo nano /usr/share/redmine/config/environment.rb
+
+# Создаём еще один файл
+## И вставляем туда: config.asset_path = '/redmine%s'
+sudo nano /usr/share/redmine/config/additional_environment.rb
+sudo chmod a+r /usr/share/redmine/config/additional_environment.rb
+
+# Запускаем unicorn и проверяем что Redmine теперь корректно работает по адресу http://localhost:8080/redmine/
+# Стили, скрипты могут не загружаться, но главное что бы ссылки (как пользовательские, так и для скриптов и стилей) вели внутрь /redmine
+# Загрузку статики мы перенесём на плечи nginx
+sudo unicorn_rails -c /usr/share/redmine/config/unicorn.conf.rb -E production
+
+# Настраиваем nginx на проксирование запросов к Redmine
+# Создаем конфигурацию для upstream:
+>upstream redmine_unicorn_server {
+>	# This is the socket we configured in unicorn.conf.rb
+>	server unix:/tmp/redmine_unicorn.sock
+>	fail_timeout=0;
+>}
+# Создаем перенаправления:
+>	location /redmine/ {
+>		alias /usr/share/redmine/public/;
+>		try_files $uri @redmine_unicorn;
+>	}
+>	location @redmine_unicorn {
+>		proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
+>		proxy_set_header Host $http_host;
+>		proxy_redirect off;
+>		proxy_pass http://redmine_unicorn_server;
+>	}
+# Создаем ссылку на самого себя внутри public (необходимо, так как nginx будет искать файлы внутри папки redmine)
+sudo ln -s /usr/share/redmine/public /usr/share/redmine/public/redmine
+
+# Перезапускаем nginx и проверяем (не забудьте запустить unicorn): http://localhost/redmine/
+sudo service nginx restart
+
+# Не забываем настроить Redmine:
+## Сменить пароль дефолтному админу: admin/admin
+## Разрешить/запретить создание пользователей
+## И т.д.
+
+# Теперь можно настроить автозапуск unicorn при старте системы
+sudo nano /etc/init/redmine.conf
+>description "Redmine in unicorn"
+>start on (filesystem and networking) or runlevel [2345]
+>stop on runlevel [016]
+>console owner
+>exec unicorn_rails -c /usr/share/redmine/config/unicorn.conf.rb -E production
+
+# Проверка работы службы
+sudo status redmine
+sudo start redmine
+ps -ef|grep unicorn
+cat /var/run/redmine_unicorn.pid
+sudo status redmine
+sudo start redmine
+sudo stop redmine
+ps -ef|grep unicorn
+
+# Перезагружаем сервер целиком и проверяем что все работает
