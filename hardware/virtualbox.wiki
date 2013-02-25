@@ -1,0 +1,5 @@
+# https://www.virtualbox.org/wiki/Linux_Downloads
+wget -q http://download.virtualbox.org/virtualbox/debian/oracle_vbox.asc -O- | sudo apt-key add -
+echo 'deb http://download.virtualbox.org/virtualbox/debian precise contrib' | sudo tee -a /etc/apt/sources.list.d/virtualbox-precise.list
+sudo apt-get update
+sudo apt-get install virtualbox-4.2 dkms
