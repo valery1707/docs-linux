@@ -3,3 +3,42 @@ wget -q http://download.virtualbox.org/virtualbox/debian/oracle_vbox.asc -O- | s
 echo 'deb http://download.virtualbox.org/virtualbox/debian precise contrib' | sudo tee -a /etc/apt/sources.list.d/virtualbox-precise.list
 sudo apt-get update
 sudo apt-get install virtualbox-4.2 dkms
+sudo usermod --append -Gvboxusers $USER
+
+
+##VBoxHeadless --startvm d82c5d45-e113-4332-8de3-51c6251057c8 --no-startvm-errormsgbox --seamless
+##VBoxManage controlvm "d82c5d45-e113-4332-8de3-51c6251057c8" acpipowerbutton
+##VBoxManage showvminfo "d82c5d45-e113-4332-8de3-51c6251057c8" | grep -E "State:\s+"
+
+== Upstart .conf ==
+<pre>
+description "Mommy's Virtual Machine with Windows XP"
+
+start on (local-filesystems and net-device-up IFACE=eth0)
+stop on runlevel [016]
+
+env vm_uid_or_name=uid-or-name-of-vm
+env vm_comment=vm-comment
+env uid=valery1707
+
+console log
+
+#respawn
+#respawn limit 5 10
+kill timeout 180
+
+script
+    exec sudo -u $uid VBoxHeadless --startvm "$vm_uid_or_name" --comment "$vm_comment"
+end script
+
+pre-stop script
+    echo "Send ACPI poweroff event to $vm_uid_or_name"
+    sudo -u $uid VBoxManage controlvm "$vm_uid_or_name" acpipowerbutton
+    echo "Wait while state is 'running'"
+    while sudo -u $uid VBoxManage showvminfo "$vm_uid_or_name" | grep -E "State:\s+running" -q
+    do
+        sleep 0.5s
+    done
+    echo "Complite ACPI waiting"
+end script
+</pre>
