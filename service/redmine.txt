@@ -119,3 +119,18 @@ sudo stop redmine
 ps -ef|grep unicorn
 
 # Перезагружаем сервер целиком и проверяем что все работает
+
+# Исправление ошибки rake (нашел тут: http://stackoverflow.com/a/7319389/1263442)
+# Добавляем в /usr/share/redmine/Gemfile строчку
+> gem 'rake'
+После этого начинает корректно работать обновление пакета
+
+# Обновление БД
+cd /usr/share/redmine/
+sudo rake db:upgrade RAILS_ENV=production
+
+# Установка плагина Agile Dwarf (http://www.redmine.org/plugins/agile_dwarf)
+cd /usr/share/redmine/lib/plugins
+sudo git clone https://github.com/iRessources/AgileDwarf.git
+cd /usr/share/redmine/
+sudo rake redmine:plugins:migrate RAILS_ENV=production
