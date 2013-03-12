@@ -31,3 +31,7 @@ F12 - заблокировать терминал
 
 # http://www.techrepublic.com/blog/opensource/is-tmux-the-gnu-screen-killer/1901
 #tmux
+sudo add-apt-repository ppa:simono/dev-tools
+sudo apt-get update
+sudo apt-get upgrade
+sudo apt-get install tmux
