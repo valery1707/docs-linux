@@ -15,6 +15,7 @@
 * AutoCopy https://addons.mozilla.org/ru/firefox/addon/autocopy/
 * Stop YouTube Autoplay https://addons.mozilla.org/ru/firefox/addon/stop-youtube-autoplay/
 * Form History Control https://addons.mozilla.org/ru/firefox/addon/form-history-control/
+* Print Edit https://addons.mozilla.org/ru/firefox/addon/print-edit/
 
 == Network ==
 * Flagfox https://addons.mozilla.org/ru/firefox/addon/flagfox/
