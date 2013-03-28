@@ -133,4 +133,17 @@ sudo rake db:upgrade RAILS_ENV=production
 cd /usr/share/redmine/lib/plugins
 sudo git clone https://github.com/iRessources/AgileDwarf.git
 cd /usr/share/redmine/
-sudo rake redmine:plugins:migrate RAILS_ENV=production
+sudo bundle exec rake redmine:plugins:migrate RAILS_ENV=production
+
+# Обновление Redmine
+sudo -i
+cd /etc/redmine/default
+stop redmine
+git stash && git pull && git stash pop
+bundle exec rake db:migrate RAILS_ENV=production
+bundle exec rake redmine:plugins:migrate RAILS_ENV=production
+start redmine
+
+# Обновление gem-ов
+sudo bundle outdated
+sudo bundle update
