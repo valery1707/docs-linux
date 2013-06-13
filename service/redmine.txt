@@ -127,7 +127,7 @@ ps -ef|grep unicorn
 
 # Обновление БД
 cd /usr/share/redmine/
-sudo rake db:upgrade RAILS_ENV=production
+sudo bundle exec rake db:upgrade RAILS_ENV=production
 
 # Установка плагина Agile Dwarf (http://www.redmine.org/plugins/agile_dwarf)
 cd /usr/share/redmine/lib/plugins
@@ -147,3 +147,5 @@ start redmine
 # Обновление gem-ов
 sudo bundle outdated
 sudo bundle update
+update-alternatives --config gem
+update-alternatives --config ruby
