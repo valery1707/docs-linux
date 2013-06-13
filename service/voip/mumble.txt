@@ -1,0 +1,16 @@
+# Mumble — свободное, кросс-платформенное VoIP приложение с открытым кодом.
+# https://ru.wikipedia.org/wiki/Mumble
+# http://mumble.sourceforge.net/
+# https://launchpad.net/~mumble/+archive/release
+
+sudo add-apt-repository ppa:mumble/release
+sudo apt-get update
+
+#Клиент
+sudo apt-get install mumble
+
+#Сервер
+sudo apt-get install mumble-server
+
+# Для настройки основных параметров сервера:
+sudo dpkg-reconfigure mumble-server
