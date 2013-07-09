@@ -149,3 +149,16 @@ sudo bundle outdated
 sudo bundle update
 update-alternatives --config gem
 update-alternatives --config ruby
+
+# Изменение пароля пользователя
+sudo -u postgres psql -d redmine_default -c "select id, login, hashed_password, salt from users"
+
+_login=user.login
+_salt=59ed1e3958e3a2788fe7603de66de860
+_password='new_password'
+
+_password_sha1=`echo -n "${_password}" | sha1sum | cut -d ' ' -f1`
+_password_out=`echo -n "${_salt}${_password_sha1}" | sha1sum | cut -d ' ' -f1`
+echo $_password_out
+
+sudo -u postgres psql -d redmine_default -c "update users set hashed_password = '${_password_out}' where login = '${_login}'"
