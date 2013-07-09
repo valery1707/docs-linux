@@ -1,6 +1,6 @@
 # Генерация ключа
 ssh-keygen -t rsa -C "valery1707@selectel1"
-ssh-keygen -t rsa -b 4096 -o amazon_rsa -C "Amazon1"
+ssh-keygen -t rsa -b 4096 -C "Amazon1"
 
 # github-test
 ssh -T git@github.com
