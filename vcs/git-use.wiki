@@ -62,3 +62,13 @@ CLI:
   git push -u origin published-branch-name
 
 .
+
+== Переименование ветки ==
+Предположим ветка уже есть (feature_bad_name), но имя её не соответствует стандартам и его нужно изменить (feature_good_name).
+CLI:
+  git pull
+  git checkout feature_bad_name
+  git branch --unset-upstream feature_bad_name
+  git branch -m feature_bad_name feature_good_name
+  git push origin :feature_bad_name
+  git push origin feature_good_name
