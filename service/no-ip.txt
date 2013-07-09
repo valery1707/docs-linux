@@ -1,6 +1,21 @@
 # Устанавливаем и конфигурируем
+
+## Из пакета
 sudo apt-get install noip2
+
+## Из бинарного пакета
 Или установить бинарный пакет из https://launchpad.net/ubuntu/precise/+package/noip2
+
+## Из архива
+cd ~/distr
+wget http://www.no-ip.com/client/linux/noip-duc-linux.tar.gz
+tar xf noip-duc-linux.tar.gz
+cd noip-2.1.9-1/
+sudo checkinstall -D --pkgname noip2 --pkgversion 2.1.9-1 make install
+sudo cp debian.noip2.sh /etc/init.d/noip2
+sudo chmod +x /etc/init.d/noip2
+sudo chown root:root /etc/init.d/noip2
+sudo service noip2 start
 
 # Если при установке возникли проблемы (чаще всего связанные с не созданным файлом конфигурации), то настраиваем в ручную
 sudo /etc/init.d/noip2 stop
