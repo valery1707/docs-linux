@@ -3,8 +3,12 @@ sudo apt-get install openjdk-6-jdk
 
 # Install on Jetty
 cd /usr/share/jetty/webapps
-sudo -u jetty wget --no-proxy ftp://192.168.8.171/\<OpenSource\>/Apache/Maven/nexus/nexus-webapp-1.9.war -O nexus.war
-sudo /etc/init.d/jetty restart
+sudo service jetty stop
+sudo -u jetty wget http://www.sonatype.org/downloads/nexus-latest.war -O nexus.war
+cd /usr/share/jetty
+sudo mkdir sonatype-work
+sudo chown jetty:adm sonatype-work
+sudo service jetty restart
 
 # Install bundle
 sudo cp nexus-oss-webapp-1.9-bundle.zip /var/lib
