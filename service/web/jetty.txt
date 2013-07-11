@@ -1,3 +1,10 @@
-sudo apt-get install jetty libjetty-extra libjetty-extra-java libjetty-java-doc libjavassist-java liblog4j1.2-java libcommons-logging-java
-gksudo gedit /etc/default/jetty &
-sudo /etc/init.d/jetty start
+sudo apt-get install jetty
+#libjetty-extra libjetty-extra-java libjetty-java-doc libjavassist-java liblog4j1.2-java libcommons-logging-java
+
+sudo nano /etc/default/jetty
+#NO_START=0
+#JETTY_HOST=127.0.0.1
+#JETTY_PORT=8080
+#JAVA_HOME=/usr/lib/jvm/java-7-openjdk-i386/jre/
+
+sudo service jetty start
