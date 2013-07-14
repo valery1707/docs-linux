@@ -13,6 +13,7 @@ sudo apt-get install nut
 # Обновляем правила для udev: они нужны для предоставления доступа NUT к нужному USB порту
 sudo udevadm control --reload-rules
 sudo udevadm control trigger
+# Это может и не помочь - так что лучше перезагрузить весь сервер после установки NUT
 ```
 
 # Настройка подключения
@@ -37,7 +38,8 @@ cat /etc/udev/rules.d/52-nut-usbups.rules | grep ...
 ```bash
 sudo upsdrvctl start
 
-# Если не работает предыдущая команда можно проверить настройки драйвера командой (пользователь root - только для тестов)
+# Если не работает предыдущая команда можно проверить настройки драйвера командой
+# (пользователь root - только для тестов)
 sudo /lib/nut/blazer_usb -u root -a ups -DDD
 ```
 
@@ -56,7 +58,7 @@ sudo nano /etc/nut/upsd.users
 ```bash
 sudo nano /etc/nut/upsmon.conf
 ```
-```ini
+```
 MONITOR ups@localhost 1 upsmon password  master
 NOTIFYCMD /usr/bin/wall
 NOTIFYFLAG ONLINE  SYSLOG+EXEC
@@ -78,7 +80,7 @@ mode = standalone
 ```bash
 sudo nano /etc/nut/upsd.conf
 ```
-```ini
+```
 LISTEN 127.0.0.1 3493
 ```
 
