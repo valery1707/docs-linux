@@ -1,0 +1,82 @@
+# Основной источник: http://unbelll.blogspot.com/2011/03/powermust-600-ups-ubuntu.html
+# Дополнительно:
+# * http://manpages.ubuntu.com/manpages/precise/man8/nutupsdrv.8.html
+# * http://manpages.ubuntu.com/manpages/precise/man8/blazer.8.html
+# * http://www.networkupstools.org/docs/FAQ.html #15
+# * http://blog.shadypixel.com/monitoring-a-ups-with-nut-on-debian-or-ubuntu-linux/
+# todo Проверить что за пакет: knutclient
+
+# Установка
+sudo apt-get install nut
+
+# Обновляем правила для udev: они нужны для предоставления доступа NUT к нужному USB порту
+sudo udevadm control --reload-rules
+sudo udevadm control trigger
+
+# Настройка подключения
+sudo nano /etc/nut/ups.conf
+```
+#!ini
+[ups]
+  driver = blazer_usb
+  port = auto
+  # todo определить наиболее подходящий subdriver
+  desc = "Mustek PowerMust 600"
+```
+
+# todo Проверка наличия прав на работу с USB [idVendor:idProduct]
+lsusb
+cat /etc/udev/rules.d/52-nut-usbups.rules | grep ...
+
+# Подключения драйвера
+sudo upsdrvctl start
+
+# Если не работает предыдущая команда можно проверить настройки драйвера командой (пользователь root - только для тестов)
+sudo /lib/nut/blazer_usb -u root -a ups -DDD
+
+# Настройка пользователей (мониторинг)
+sudo nano /etc/nut/upsd.users
+```
+#!ini
+[upsmon]
+  password = password
+  allowfrom = localhost
+  upsmon master
+```
+
+# Настройка сервиса мониторинга
+sudo nano /etc/nut/upsmon.conf
+```
+#!ini
+MONITOR ups@localhost 1 upsmon password  master
+NOTIFYCMD /usr/bin/wall
+NOTIFYFLAG ONLINE  SYSLOG+EXEC
+NOTIFYFLAG ONBATT  SYSLOG+EXEC
+NOTIFYFLAG LOWBATT SYSLOG+EXEC
+SHUTDOWNCMD "/sbin/shutdown -h now"
+POLLFREQALERT 2
+```
+
+# Установка режима работы сервера
+sudo nano /etc/nut/nut.conf
+```
+#!ini
+mode = standalone
+```
+
+# параметры работы сервера
+sudo nano /etc/nut/upsd.conf
+```
+#!ini
+LISTEN 127.0.0.1 3493
+```
+
+# Запуск серверов
+sudo service nut restart
+sudo service ups-monitor restart
+
+# Проверка состояния
+sudo upsc ups@localhost
+
+# Проверка сценария выключения
+sudo upsmon -c fsd
