@@ -142,6 +142,8 @@ stop redmine
 git stash && git pull && git stash pop
 bundle exec rake db:migrate RAILS_ENV=production
 bundle exec rake redmine:plugins:migrate RAILS_ENV=production
+bundle exec rake tmp:cache:clear
+bundle exec rake tmp:sessions:clear
 start redmine
 
 # Обновление gem-ов
