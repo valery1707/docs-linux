@@ -25,7 +25,7 @@ sudo nano /etc/nut/ups.conf
   driver = blazer_usb
   port = auto
   # todo определить наиболее подходящий subdriver
-  desc = "Mustek PowerMust 600"
+  desc = "Mustek PowerMust 637 Plus"
 ```
 
 todo Проверка наличия прав на работу с USB [idVendor:idProduct]
