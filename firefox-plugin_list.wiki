@@ -34,7 +34,7 @@
 * -DownThemAll! (2.0.2)
 * -FlashGot (1.2.9.2)
 * -NetVideoHunter (1.7)
-* Easy YouTube Video Downloader https://addons.mozilla.org/ru/firefox/addon/easy-youtube-video-downl-10137/
+* SaveFrom.net помощник https://addons.mozilla.org/ru/firefox/addon/savefromnet-helper/
 
 == Common-GUI extend ==
 * -Better Gmail 2 (1.2)
