@@ -1,0 +1,9 @@
+# Модификация времени в EXIF
+## Часы, минуты, секунды
+exiv2 -v adjust -a [-]HH[:MM[:SS]] *.JPG
+## Год
+exiv2 -v adjust -Y [-]{года} *.JPG
+## Месяц
+exiv2 -v adjust -O [-]{месяц} *.JPG
+## День
+exiv2 -v adjust -D [-]{месяц} *.JPG
