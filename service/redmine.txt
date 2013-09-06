@@ -130,7 +130,7 @@ cd /usr/share/redmine/
 sudo bundle exec rake db:upgrade RAILS_ENV=production
 
 # Установка плагина Agile Dwarf (http://www.redmine.org/plugins/agile_dwarf)
-cd /usr/share/redmine/lib/plugins
+cd /etc/redmine/default/plugins
 sudo git clone https://github.com/iRessources/AgileDwarf.git
 cd /usr/share/redmine/
 sudo bundle exec rake redmine:plugins:migrate RAILS_ENV=production
