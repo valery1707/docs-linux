@@ -135,6 +135,29 @@ sudo git clone https://github.com/iRessources/AgileDwarf.git
 cd /usr/share/redmine/
 sudo bundle exec rake redmine:plugins:migrate RAILS_ENV=production
 
+# Установка плагина Reddrop (http://www.redmine.org/plugins/reddrop)
+sudo -i
+cd /etc/redmine/default/plugins
+wget https://github.com/alrick/Reddrop/archive/master.zip -O redmine_reddrop.zip
+unzip -d /tmp redmine_reddrop.zip
+mv /tmp/Reddrop-master/redmine_reddrop/ ./
+rm -r /tmp/Reddrop-master/
+# Создаём приложение:
+# * https://www.dropbox.com/developers/apps
+# * Create app
+# * Dropbox API app
+# * Files and datastores
+# * No - My app needs access to files already on Dropbox.
+# * All file types
+# * kpi-redmine
+nano redmine_reddrop/app/models/daccess.rb
+service redmine stop
+bundle install
+bundle exec rake redmine:plugins:migrate RAILS_ENV=production
+service redmine start
+# Линкуем пользоватя к приложению: http://valery1707-cloud2.no-ip.info/redmine/accesstokens
+# В каждом проекте включаем модуль Reddrop и линкуем
+
 # Обновление Redmine
 sudo -i
 cd /etc/redmine/default
