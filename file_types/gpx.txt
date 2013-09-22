@@ -1,0 +1,2 @@
+# .gpx -> .geojson (sudo apt-get install gdal-bin)
+ogr2ogr -f GeoJSON output.geojson input.gpx tracks
