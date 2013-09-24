@@ -1,6 +1,10 @@
-# Публикуем локальный притер в Облако (http://habrahabr.ru/post/149520/)
+# Публикуем локальный притер в Облако
+
+Источник: http://habrahabr.ru/post/149520/
 
 ## Установка с исходников
+
+```bash
 sudo apt-get install git-core python python-cups python-setuptools
 
 git clone git://github.com/armooo/cloudprint.git
@@ -9,14 +13,20 @@ chmod +x setup.py
 
 python setup.py build
 sudo python setup.py install
+```
 
 ## Установка через pip
+
+```bash
 sudo apt-get install python-pip
 sudo pip install cloudprint
+```
 
 ## Первый запуск
 
+```bash
 cloudprint.py
+```
 
 ## Настройка демона через Upstart
 
@@ -41,10 +51,14 @@ sudo start cloudprint
 
 
 # Используем принтер из Облака в Windows
-#Paperless Printer: http://www.rarefind.com/paperlessprinter/index.html
+
+Paperless Printer: http://www.rarefind.com/paperlessprinter/index.html
 
 # Используем принтер из Облака в Unbuntu
+
+```bash
 sudo add-apt-repository ppa:simon-cadman/cups-cloud-print
 sudo apt-get update
 sudo apt-get install cupscloudprint
 sudo /usr/lib/cloudprint-cups/setupcloudprint.py
+```
