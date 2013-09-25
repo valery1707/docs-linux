@@ -15,3 +15,6 @@ Host amazon1
   User ubuntu
   IdentityFile /f/BackUp/Soft/KeePass/aws.amazon.com/valery1707.pem
   LocalForward 9906 127.0.0.1:3306
+
+# Изменение ключевой фразы на ключе (Change passphrase on SSH key)
+ssh-keygen -p [-P old_passphrase] [-N new_passphrase] [-f keyfile]
