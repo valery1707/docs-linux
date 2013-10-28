@@ -20,6 +20,8 @@
 * SixOrNot https://addons.mozilla.org/ru/firefox/addon/sixornot/
 * Redirect Remover https://addons.mozilla.org/ru/firefox/addon/redirect-remover/
 * Redirector https://addons.mozilla.org/ru/firefox/addon/redirector/
+* HTTPS Finder https://code.google.com/p/https-finder/
+* HTTPS-Everywhere https://www.eff.org/https-everywhere
 
 == Common-download ==
 * Download statusbar https://addons.mozilla.org/ru/firefox/addon/download-statusbar/
