@@ -1,0 +1,18 @@
+# Загружаемся с LiveCD
+# Думаю лучше загружаться с того-же диска который использовался для установки системы
+
+# Определяем раздел с системой:
+sudo fdisk -l
+
+# Биндим директории
+sudo mount /dev/sda7 /mnt
+sudo mount --bind /sys /mnt/sys
+sudo mount --bind /proc /mnt/proc
+sudo mount --bind /dev /mnt/dev
+sudo mount --bind /dev/pts /mnt/dev/pts
+mount -o bind /etc/resolv.conf /mnt/etc/resolv.conf
+
+# Переходим в chroot и переустанавливаем grub
+sudo chroot /mnt
+sudo apt-get update
+sudo apt-get install --reinstall grub2
