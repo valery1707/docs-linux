@@ -8,3 +8,7 @@ sudo apt-get install jupiter
 
 #Затем добавить поддержку SHE для Eee-PC
 sudo apt-get install jupiter-support-eee
+
+# PPA больше не поддерживаем новые версии Ubuntu
+# http://jupiter.sourceforge.net/downloads.html
+sudo alien --to-deb --scrips *.rpm
