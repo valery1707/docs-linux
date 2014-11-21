@@ -1,0 +1,6 @@
+#http://stackoverflow.com/a/1920585
+echo '{"foo": "lorem", "bar": "ipsum"}' | python -m json.tool
+
+#http://stedolan.github.io/jq/manual/
+sudo apt-get install jq
+echo '{"foo": "lorem", "bar": "ipsum"}' | jq '.foo'
