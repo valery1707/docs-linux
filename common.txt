@@ -29,6 +29,9 @@ sudo apt-get install lynx
 #Утилиты для мониторинга нагрузки
 sudo apt-get install htop atop hatop iftop iotop
 
+#Утилиты для конвертации файлов между DOS/Windows форматами перевода каретки
+sudp apt-get install tofrodos
+
 #Grub
 sudo add-apt-repository ppa:danielrichter2007/grub-customizer
 sudo apt-get update
