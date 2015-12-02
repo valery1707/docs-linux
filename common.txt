@@ -26,6 +26,9 @@ sudo apt-get install cfv
 #Browser
 sudo apt-get install lynx
 
+#Утилиты для мониторинга нагрузки
+sudo apt-get install htop atop hatop iftop iotop
+
 #Grub
 sudo add-apt-repository ppa:danielrichter2007/grub-customizer
 sudo apt-get update
