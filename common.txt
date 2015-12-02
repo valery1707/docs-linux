@@ -6,6 +6,9 @@ sudo apt-get install python-software-properties
 # curl, wget, wput
 sudo apt-get install curl wget wput
 
+# aria2 - многофункциональный консольный загрузчик файлов (HTTP(S), FTP, SFTP, BitTorrent, Metalink, Magnet)
+sudo apt-get install aria2
+
 # tmux
 sudo apt-get install tmux
 
