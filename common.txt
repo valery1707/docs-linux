@@ -9,6 +9,9 @@ sudo apt-get install curl wget wput
 # tmux
 sudo apt-get install tmux
 
+# mosh = Mobile Shell http://habrahabr.ru/post/243651/
+sudo apt-get install mosh
+
 #archiver
 sudo apt-get install p7zip-full
 #Консольная утилита работы с архивами (aunpack, apack, als, acat)
