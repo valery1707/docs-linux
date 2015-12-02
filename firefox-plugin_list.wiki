@@ -25,6 +25,7 @@
 
 == Common-download ==
 * Download statusbar https://addons.mozilla.org/ru/firefox/addon/download-statusbar/
+* Download statusbar (S3) https://addons.mozilla.org/ru/firefox/addon/s3download-statusbar/
 * SaveFrom.net помощник https://addons.mozilla.org/ru/firefox/addon/savefromnet-helper/
 
 == Common-GUI extend ==
