@@ -1,7 +1,23 @@
+# Установка правильной таймзоны
+sudo dpkg-reconfigure tzdata
+
 sudo apt-get install ubuntu-restricted-extras
 
-#Добавляет в том числе и add-apt-repository
+# To install add-apt-repository on Ubuntu 10.04 or 12.04:
 sudo apt-get install python-software-properties
+# To install add-apt-repository on Ubuntu 14.04: 
+sudo apt-get install software-properties-common
+
+# etckeeper
+sudo apt-get install git
+git config --global user.name ""
+git config --global user.email ""
+sudo apt-get install etckeeper git
+sudo nano /etc/etckeeper/etckeeper.conf
+> VCS="git"
+> GIT_COMMIT_OPTIONS=""
+sudo etckeeper init
+sudo etckeeper commit "Initial commit."
 
 # curl, wget, wput
 sudo apt-get install curl wget wput
@@ -10,6 +26,8 @@ sudo apt-get install curl wget wput
 sudo apt-get install aria2
 
 # tmux
+# 12.04-backport: sudo add-apt-repository ppa:kalakris/tmux && sudo apt-get update
+# dev packages:   sudo add-apt-repository ppa:pi-rho/dev && sudo apt-get update
 sudo apt-get install tmux
 
 # mosh = Mobile Shell http://habrahabr.ru/post/243651/
@@ -30,7 +48,7 @@ sudo apt-get install lynx
 sudo apt-get install htop atop hatop iftop iotop
 
 #Утилиты для конвертации файлов между DOS/Windows форматами перевода каретки
-sudp apt-get install tofrodos
+sudo apt-get install tofrodos
 
 #Grub
 sudo add-apt-repository ppa:danielrichter2007/grub-customizer
@@ -56,3 +74,20 @@ sudo apt-get install ubuntu-tweak
 sudo add-apt-repository ppa:atareao/sunflower
 sudo apt-get update
 sudo apt-get install sunflower 
+# mc https://www.midnight-commander.org/wiki/Binaries
+sudo apt-key adv --keyserver keyserver.ubuntu.com --recv-keys 2EE7EF82
+echo "deb http://www.tataranovich.com/debian $(lsb_release --codename --short) main" | sudo tee -a /etc/apt/sources.list.d/mc-stable.list
+echo "deb-src http://www.tataranovich.com/debian $(lsb_release --codename --short) main" | sudo tee -a /etc/apt/sources.list.d/mc-stable.list
+
+# Решаем проблемы с переключением раскладок в Ubuntu (если они есть)
+https://bugs.launchpad.net/unity/+bug/1226962/comments/221
+
+# Изменение кодировки файла win1251 -> UTF-8
+sudo apt-get install enca
+enca -L ru -x utf-8 file.txt
+
+# Sublime Text Editor
+# http://www.webupd8.org/2013/07/sublime-text-3-ubuntu-ppa-now-available.html
+sudo add-apt-repository ppa:webupd8team/sublime-text-3
+sudo apt-get update
+sudo apt-get install sublime-text-installer
