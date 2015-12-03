@@ -1,12 +1,27 @@
+[OpenJDK 6]
 sudo apt-get install openjdk-6-jre openjdk-6-jdk icedtea6-plugin
+
+[OpenJDK 7]
 sudo apt-get install openjdk-7-jre openjdk-7-jdk icedtea-7-plugin
 
+[OpenJDK 8 (after 15.04 "vivid")]
+sudo apt-get install openjdk-8-jre openjdk-8-jdk
+
+[OpenJDK 8 (until 14.04 "trusty")]
+sudo add-apt-repository ppa:openjdk-r/ppa
+sudo apt-get update
+sudo apt-get install openjdk-8
+
+[OracleJDK 8]
+sudo add-apt-repository ppa:webupd8team/java -y
+sudo apt-get update
+sudo apt-get install oracle-java8-installer
+
+[Ant]
 sudo apt-get install ant
 
+[Maven 2]
 sudo apt-get install maven2
 
-https://launchpad.net/~natecarlson/+archive/maven3
-sudo add-apt-repository ppa:natecarlson/maven3
-sudo apt-get update
-sudo apt-get install maven3
-# Add "/usr/share/maven3/bin" to $PATH
+[Maven 3]
+sudo apt-get install maven

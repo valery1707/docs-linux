@@ -1,0 +1,5 @@
+# Download sources for dependencies
+mvn dependency:sources
+
+# Download javadoc for dependencies
+mvn dependency:resolve -Dclassifier=javadoc

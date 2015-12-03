@@ -6,8 +6,14 @@ sudo apt-get install python-software-properties
 # curl, wget, wput
 sudo apt-get install curl wget wput
 
+# aria2 - многофункциональный консольный загрузчик файлов (HTTP(S), FTP, SFTP, BitTorrent, Metalink, Magnet)
+sudo apt-get install aria2
+
 # tmux
 sudo apt-get install tmux
+
+# mosh = Mobile Shell http://habrahabr.ru/post/243651/
+sudo apt-get install mosh
 
 #archiver
 sudo apt-get install p7zip-full
@@ -19,6 +25,12 @@ sudo apt-get install cfv
 
 #Browser
 sudo apt-get install lynx
+
+#Утилиты для мониторинга нагрузки
+sudo apt-get install htop atop hatop iftop iotop
+
+#Утилиты для конвертации файлов между DOS/Windows форматами перевода каретки
+sudp apt-get install tofrodos
 
 #Grub
 sudo add-apt-repository ppa:danielrichter2007/grub-customizer
