@@ -8,3 +8,9 @@ Acquire::ftp::proxy "ftp://10.8.0.1:3128/";
 Acquire::https::proxy "https://10.8.0.1:3128/";
 
 Acquire::http::proxy {"http://10.8.0.1:3128/";};
+
+
+# Load one unknown key
+sudo apt-key adv --recv-keys --keyserver keyserver.ubuntu.com 836CC41976FB442E
+# Load all unknown keys
+sudo apt-key adv --recv-keys --keyserver keyserver.ubuntu.com `sudo apt-get update 2>&1 | grep -o '[0-9A-Z]\{16\}$' | xargs`
