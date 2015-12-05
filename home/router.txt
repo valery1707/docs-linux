@@ -35,7 +35,7 @@
 ipkg-opt update
 ipkg-opt upgrade -test
 ipkg-opt upgrade
-cd /opt/home && ipkg-opt upgrade | tee -a `date --rfc-3339=date`_upgrade.log
+cd /opt/home && ipkg-opt upgrade | tee -a `date -Idate`_upgrade.log
 
 === Полезное ===
 # Список установленного
@@ -51,9 +51,9 @@ ipkg-opt search regexp
 # Привязываем к аккаунту NO-IP и OpenDNS
 # Заходим на роутер (telnet/ssh)
 # Устанавливаем ddclient (не смотря на инфу что встренный тоже сможет работать - у меня этого не произошло)
-#* ipkg-opt install ddclient libio-socket-ssl-perl
+#* ipkg-opt install ddclient perl-io-socket-ssl
 # Копируем конфигфайл
-#* cp /opt/etc/ddclient.conf-dist /opt/etc/ddclient.conf
+#* cp /opt/etc/ddclient.conf-dist /opt/etc/ddclient/ddclient.conf
 # Добавляем в конце
 <pre>
 ##
