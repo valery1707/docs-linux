@@ -1,21 +1,17 @@
-# http://lug.nsk.ru/lugnskru/2010/10/ustanovka-postgresql-9-pgadmin-iii-v-ubuntu-10-04.html
+# https://wiki.postgresql.org/wiki/Apt#PostgreSQL_packages_for_Debian_and_Ubuntu
 
-#Установим необходимые нам дополнительные пакеты
-sudo apt-get install python-software-properties
+#Качаем и запускам скрипт
+wget http://anonscm.debian.org/loggerhead/pkg-postgresql/postgresql-common/trunk/download/head:/apt.postgresql.org.s-20130224224205-px3qyst90b3xp8zj-1/apt.postgresql.org.sh
+chmod u+x apt.postgresql.org.sh
+sudo ./apt.postgresql.org.sh
 
-#Добавляем в свои источники пакетов дополнительный
-sudo add-apt-repository ppa:pitti/postgresql
-
-#Обновим список
-sudo apt-get update
-
-#И теперь уже устанавливаем Postgresql 9.0.1 и pgAdmin III 1.12.0 (на момент написания статьи)
+#И теперь уже устанавливаем Postgresql 9 и pgAdmin III
 sudo apt-get install postgresql postgresql-contrib pgadmin3
 
 #Настраиваем приём подключений по TCP
-sudo nano /etc/postgresql/9.2/main/postgresql.conf
+sudo nano /etc/postgresql/*/main/postgresql.conf
 > listen_addresses = '127.0.0.1,10.17.6.115,10.17.2.4'
-sudo nano /etc/postgresql/9.2/main/pg_hba.conf
+sudo nano /etc/postgresql/*/main/pg_hba.conf
 > host	all				all				10.17.6.1/24			md5 #Local network
 
 #После установки остановим сервер и запустим, указав кодировку UTF-8
