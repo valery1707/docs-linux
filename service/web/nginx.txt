@@ -1,3 +1,7 @@
 sudo add-apt-repository ppa:nginx/stable
 sudo apt-get update 
 sudo apt-get install nginx
+
+sudo add-apt-repository ppa:nginx/development
+sudo apt-get update 
+sudo apt-get install nginx
