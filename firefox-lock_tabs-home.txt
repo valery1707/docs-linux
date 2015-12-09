@@ -1,7 +1,21 @@
-https://mail.google.com/mail/?shva=1#inbox
-http://www.facebook.com/
-https://plus.google.com/u/0/?hl=ru
-http://sudouser.org/?p=1229
-http://forums.overclockers.ru/viewtopic.php?p=8894229
-http://www.skyrimnexus.com/downloads/top/recent.php
-http://vivovoco.rsl.ru/VV/MISC/5/LUBI/LUBI.HTM
+[Window 1 = Mail&Social]
+https://mail.google.com/mail/u/0/#inbox
+https://twitter.com/
+https://www.facebook.com/
+https://photos.google.com/u/0/
+https://trello.com/b/W6UhJUZk/home
+https://pintask.me/emeralds
+https://vk.com/im
+https://mail.yandex.ru/neo2/#inbox
+https://e.mail.ru/messages/inbox/
+
+[Windows 2 = Company]
+https://kpi.slack.com/
+https://trello.com/b/XLQfzQwL/kpi
+https://todoist.com/app?v=305#project/129956628
+http://corp.primein.kz/jenkins/view/ar/
+
+[Window 3 = Project]
+http://corp.primein.kz/redmine/projects/va/issues?query_id=23
+
+[Window 4 = Work]
