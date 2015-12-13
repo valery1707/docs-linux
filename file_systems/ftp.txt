@@ -1,0 +1,5 @@
+sudo apt-get install curlftpfs
+
+[run-time]
+sudo mkdir /media/mount_path
+sudo curlftpfs -o allow_other ftp-user:ftp-pass@my-ftp-location.local /media/mount_path
