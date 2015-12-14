@@ -10,6 +10,7 @@
 * SmartVideo For YouTube https://addons.mozilla.org/ru/firefox/addon/smartvideo-for-youtube-mytube/
 * Form History Control https://addons.mozilla.org/ru/firefox/addon/form-history-control/
 * Print Edit https://addons.mozilla.org/ru/firefox/addon/print-edit/
+* Session Saver https://addons.mozilla.org/ru/firefox/addon/session-manager/
 
 == Network ==
 * Flagfox https://addons.mozilla.org/ru/firefox/addon/flagfox/
