@@ -1,0 +1,28 @@
+* Apache config (.htaccess) support
+* Bash Support
+* Equals and HashCode Deluxe generator
+* fuGen
+* generate-chained-accessors
+* Google Protocol Buffers support
+* _Ivy Plugin_
+* _JavaFX support_
+* _JBoss jBPM_
+* *Key promoter*
+* Log support
+* Markdown
+* nginx support
+* PHP
+* SBT
+* Scala
+* TestDox
+* .ignore
+
+new for check
+* Copy as HTML
+* Play 2.0 support
+
+Some config (Ctrl+Shift+S):
+* Editor->General->Editor Tabs->Tab closing policy->Tab limit = 20
+* Editor->General->Editor Tabs->Tab Appearance->Show tabs in single row = false
+* Editor->File Encodings->IDE Encoding = UTF-8
+* Editor->File Encodings->Project Encoding = UTF-8
