@@ -1,0 +1,8 @@
+# Поиск больших файлов
+git rev-list --objects --all | grep -E `git verify-pack -v .git/objects/pack/*.idx | sort -k 3 -n | tail -10 | awk '{print$1}' | sed ':a;N;$!ba;s/\n/|/g'`
+
+# Удаление файлов по маске 1 (работает как-то не так)
+git filter-branch --prune-empty --index-filter 'git rm -rf --cached --ignore-unmatch MY-BIG-DIRECTORY-OR-FILE' --tag-name-filter cat -- --all
+
+# Удаление файлов по маске 2
+git filter-branch --tree-filter 'rm -rf `cat /full/path/to/large_files.txt | cut -d " " -f 2` ' --prune-empty <BRANCHES>
