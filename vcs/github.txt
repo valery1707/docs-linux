@@ -1,0 +1,7 @@
+# Fork
+git clone https://github.com/YOUR_USERNAME/YOUR_FORK.git
+git remote add upstream https://github.com/ORIGINAL_OWNER/ORIGINAL_REPOSITORY.git
+
+# Merge from Parent
+git fetch upstream
+git merge upstream/master
