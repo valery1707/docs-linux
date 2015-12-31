@@ -16,3 +16,5 @@ mount -o bind /etc/resolv.conf /mnt/etc/resolv.conf
 sudo chroot /mnt
 sudo apt-get update
 sudo apt-get install --reinstall grub2
+update-grub2
+grub-install /dev/sda
