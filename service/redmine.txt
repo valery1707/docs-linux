@@ -163,6 +163,7 @@ sudo -i
 cd /etc/redmine/default
 stop redmine
 git stash && git pull && git stash pop
+bundle update
 bundle exec rake db:migrate RAILS_ENV=production
 bundle exec rake redmine:plugins:migrate RAILS_ENV=production
 bundle exec rake tmp:cache:clear
