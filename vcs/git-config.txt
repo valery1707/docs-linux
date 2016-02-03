@@ -8,6 +8,7 @@ git config --global alias.ci commit
 git config --global alias.br branch
 git config --global alias.out 'log @{u}..'
 git config --global alias.in '!git remote update -p; git log ..@{u}'
+git config --global alias.hub '!git clone git@github.com:valery1707/${1}.git && cd ${1} && echo "Add Upstream" && git remote add upstream $(curl -H "User-Agent: valery1707" https://api.github.com/repos/valery1707/${1} --silent | jq-win64.exe -r ".parent.clone_url") && echo "Fetch Upstream" && git fetch upstream && echo "Merge with upstream/master" && git merge upstream/master && git status'
 
 #Colors
 git config --global color.ui true
