@@ -4,3 +4,5 @@
 * Нативно поддерживается Android (2.3.5)
 
 pptp: http://www.pvsm.ru/it-infrastruktura/6506
+
+L2TP/IPSec Crt VPN
