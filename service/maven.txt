@@ -3,3 +3,19 @@ mvn dependency:sources
 
 # Download javadoc for dependencies
 mvn dependency:resolve -Dclassifier=javadoc
+
+# Список активных профилей
+mvn help:active-profiles
+
+# Проверка зависимостей на новые версии
+mvn versions:display-dependency-updates
+mvn versions:display-dependency-updates --projects mp-war
+
+# Проверка плагинов на новые версии
+mvn versions:display-plugin-updates
+
+# Сортировка pom.xml (отступы только пробелами :( )
+mvn com.google.code.sortpom:maven-sortpom-plugin:sort -Dsort.createBackupFile=false -Dsort.keepBlankLines=true -Dsort.nrOfIndentSpace=4
+
+# Изменение версии
+mvn versions:set --quiet -DgenerateBackupPoms=false -DnewVersion=${version_new}
