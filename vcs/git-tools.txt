@@ -1,6 +1,12 @@
 # Изменение атрибутов файла сразу в индексе. Удобно если ОС поддерживает не все необходимые атрибуты
 git update-index --chmod=+x script.sh
 
+# Изменение даты некоторых коммитов в прошлом
+git rebase --interactive <refid>
+> Для нужных коммитов выбираем режим "edit"
+git commit --amend --reset-author --no-edit --date "Mon Mar 7 11:03:43 2015 +0600"
+git rebase --continue
+
 # Поиск больших файлов
 git rev-list --objects --all | grep -E `git verify-pack -v .git/objects/pack/*.idx | sort -k 3 -n | tail -10 | awk '{print$1}' | sed ':a;N;$!ba;s/\n/|/g'`
 
