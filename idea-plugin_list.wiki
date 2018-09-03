@@ -24,20 +24,20 @@ new for check
 
 Some config (Ctrl+Shift+S):
 * Editor->General->Editor Tabs
-  * Tab closing policy->Tab limit = 25
-  * Tab Appearance->Show tabs in single row = false
+** Tab closing policy->Tab limit = 25
+** Tab Appearance->Show tabs in single row = false
 * Editor->General->Font
-  * Font = Fira Code
-  * Size: 12
-  * Enable font ligature: true
+** Font = Fira Code
+** Size: 12
+** Enable font ligature: true
 * Editor->General->Apperance
-  * Show parameter name hints: false
+** Show parameter name hints: false
 * Editor->File Encodings
-  * IDE Encoding = UTF-8
-  * Project Encoding = UTF-8
+** IDE Encoding = UTF-8
+** Project Encoding = UTF-8
 * Editor->Code style
-  * Hard wrap at: 160
-  * Enable formatter markers in comments: true
-  * Enale EditorConfig suppoer: true
+** Hard wrap at: 160
+** Enable formatter markers in comments: true
+** Enale EditorConfig suppoer: true
 * Build,Execution,Deployment->Build Tools->Maven
-  * Maven home directory: G:/Program/maven
+** Maven home directory: G:/Program/maven
